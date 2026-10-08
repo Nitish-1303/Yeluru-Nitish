@@ -208,7 +208,7 @@ export const userData: UserData = {
         "Worked directly with customers as a Forward Deployed Engineer, translating user feedback into production features and delivering improvements through rapid weekly release cycles.",
       ],
       skills: ["TypeScript", "React", "Next.js", "Node.js", "Python", "FastAPI", "Go", "GCP", "Docker", "Pipecat", "Vapi", "OpenAI", "Vertex AI"],
-      logoUrl: "/logos/stealth.svg",
+      logoUrl: "/logos/stealth.png",
     },
     {
       company: "Alignerr",
