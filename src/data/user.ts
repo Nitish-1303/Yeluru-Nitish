@@ -140,7 +140,7 @@ export const userData: UserData = {
       "Sharing AI engineering on YouTube",
       "Based in Chennai, moving to Bangalore",
     ],
-    photoUrl: null, // Unset: renders intentional NY monogram fallback
+    photoUrl: "/profile-photo.png",
   },
   about: {
     paragraphs: [
