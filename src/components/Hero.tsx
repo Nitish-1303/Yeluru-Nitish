@@ -44,14 +44,14 @@ export function Hero() {
           <div className="flex items-center gap-3.5">
             {/* Circular photo slot with intentional NY monogram fallback */}
             <div
-              className="relative w-12 h-12 rounded-full overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 flex items-center justify-center shrink-0 shadow-xs"
+              className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 flex items-center justify-center shrink-0 shadow-xs"
               aria-label="Nitish Yeluru avatar fallback"
             >
               {userData.hero.photoUrl ? (
                 <img
                   src={userData.hero.photoUrl}
                   alt={userData.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-[68%_center]"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-900 text-neutral-900 dark:text-neutral-100 font-mono font-bold text-sm tracking-tighter select-none">

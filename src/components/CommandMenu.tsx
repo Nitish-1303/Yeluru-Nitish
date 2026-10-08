@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Search, Compass, ExternalLink, Moon, Sun, Laptop, X } from "lucide-react";
 import { userData } from "../data/user.ts";
+import { setTheme as saveTheme } from "../lib/theme.ts";
 
 interface CommandMenuProps {
   isOpen: boolean;
@@ -80,17 +81,7 @@ export function CommandMenu({ isOpen, onClose }: CommandMenuProps) {
 
   const setTheme = (mode: "light" | "dark" | "system") => {
     onClose();
-    localStorage.setItem("theme", mode);
-    const root = document.documentElement;
-    if (mode === "system") {
-      const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      if (isDark) root.classList.add("dark");
-      else root.classList.remove("dark");
-    } else if (mode === "dark") {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
+    saveTheme(mode);
   };
 
   const allItems: CommandItem[] = [
@@ -149,6 +140,14 @@ export function CommandMenu({ isOpen, onClose }: CommandMenuProps) {
       category: "Navigation",
       icon: Compass,
       action: () => scrollToSection("opensource"),
+    },
+    {
+      id: "nav-testimonials",
+      title: "Testimonials",
+      subtitle: "Feedback from teams and maintainers",
+      category: "Navigation",
+      icon: Compass,
+      action: () => scrollToSection("testimonials"),
     },
     {
       id: "nav-education",

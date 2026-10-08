@@ -9,6 +9,7 @@ import { Stack } from "../components/Stack.tsx";
 import { Experience } from "../components/Experience.tsx";
 import { Projects } from "../components/Projects.tsx";
 import { OpenSource } from "../components/OpenSource.tsx";
+import { Testimonials } from "../components/Testimonials.tsx";
 import { Education } from "../components/Education.tsx";
 import { Contact } from "../components/Contact.tsx";
 import { Footer } from "../components/Footer.tsx";
@@ -30,7 +31,7 @@ export default function Home() {
       <Navbar onOpenCommandMenu={() => setCommandMenuOpen(true)} />
 
       {/* Main Column: narrow centered editorial layout (max-w-2xl ~672px) */}
-      <main className="flex-1 w-full max-w-2xl mx-auto px-4 sm:px-6">
+      <main className="flex-1 w-full max-w-2xl mx-auto px-4 pb-20 sm:px-6 sm:pb-0">
         {/* 2. Hero Section */}
         <Hero />
 
@@ -52,10 +53,13 @@ export default function Home() {
         {/* 8. Open Source Merged PRs */}
         <OpenSource />
 
-        {/* 9. Education */}
+        {/* 9. Testimonials */}
+        <Testimonials />
+
+        {/* 10. Education */}
         <Education />
 
-        {/* 10. Contact CTA */}
+        {/* 11. Contact CTA */}
         <Contact />
       </main>
 

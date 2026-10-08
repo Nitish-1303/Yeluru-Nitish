@@ -12,10 +12,17 @@ export function About() {
         </span>
       </div>
 
-      <div className="space-y-3 text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed font-normal">
-        {userData.about.paragraphs.map((paragraph, idx) => (
-          <p key={idx}>{paragraph}</p>
-        ))}
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-[minmax(0,1fr)_180px] sm:items-start">
+        <div className="space-y-3 text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed font-normal">
+          {userData.about.paragraphs.map((paragraph, idx) => (
+            <p key={idx}>{paragraph}</p>
+          ))}
+        </div>
+        <img
+          src="/nitish.jpg"
+          alt="Nitish Yeluru"
+          className="w-full max-w-sm aspect-[4/3] sm:aspect-[3/4] object-cover object-[68%_center] border border-neutral-200 dark:border-neutral-800"
+        />
       </div>
     </section>
   );
