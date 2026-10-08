@@ -140,7 +140,7 @@ export const userData: UserData = {
       "Sharing AI engineering on YouTube",
       "Based in Chennai, moving to Bangalore",
     ],
-    photoUrl: "/profile-photo.png",
+    photoUrl: "/nitish-avatar.jpg",
   },
   about: {
     paragraphs: [
