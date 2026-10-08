@@ -9,6 +9,7 @@ import { Stack } from "../components/Stack.tsx";
 import { Experience } from "../components/Experience.tsx";
 import { Projects } from "../components/Projects.tsx";
 import { OpenSource } from "../components/OpenSource.tsx";
+import { Testimonials } from "../components/Testimonials.tsx";
 import { Education } from "../components/Education.tsx";
 import { Contact } from "../components/Contact.tsx";
 import { Footer } from "../components/Footer.tsx";
@@ -52,10 +53,13 @@ export default function Home() {
         {/* 8. Open Source Merged PRs */}
         <OpenSource />
 
-        {/* 9. Education */}
+        {/* 9. Testimonials */}
+        <Testimonials />
+
+        {/* 10. Education */}
         <Education />
 
-        {/* 10. Contact CTA */}
+        {/* 11. Contact CTA */}
         <Contact />
       </main>
 
