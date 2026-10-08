@@ -1,45 +1,41 @@
 # Nitish Yeluru | Portfolio
 
-Personal portfolio of Nitish Yeluru, a full-stack and GenAI engineer focused on developer tooling and web applications.
-
-This repository contains the portfolio website: background, technical skills, experience, projects, open-source contributions, education, and contact links.
+A static frontend portfolio for Nitish Yeluru, built with Next.js and exported as a pure client-side site.
 
 ## Features
 
-- Responsive, single-column layout with section navigation.
-- Light, dark, and system themes, with the selected theme saved locally.
-- Searchable command menu, opened with `Cmd + K` or `Ctrl + K`, for navigation, contact links, and theme changes.
-- Expandable project entries and an experience timeline.
-- Open-source contribution links and organization logos.
-- Page metadata for search and social previews.
+- Responsive single-column portfolio layout
+- Light, dark, and system theme support
+- Searchable command menu with keyboard shortcuts
+- Experience timeline, project sections, and education details
+- Social links and contact CTA
+- Static export pipeline for deployment to GitHub Pages or any static host
 
-## Built with
+## Stack
 
-- **Next.js App Router** for the application structure and static export.
-- **React and TypeScript** for UI components and typed portfolio data.
-- **Tailwind CSS** for styling.
-- **Motion** for animations.
-- **Lucide React and Simple Icons** for icons.
+- Next.js App Router
+- React + TypeScript
+- Tailwind CSS
+- Motion for subtle UI animation
+- Lucide icons and Simple Icons
 
 ## Local development
 
-Install dependencies from the repository root:
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-Start the Next.js development server:
+Start the app locally:
 
 ```bash
-npx next dev
+npm run dev
 ```
 
 Open `http://localhost:3000`.
 
-The current `npm run dev` and `npm run preview` scripts target Vite. Use the Next.js command above for the app in `src/app`.
-
-## Checks and build
+## Validation and build
 
 Run the TypeScript check:
 
@@ -47,43 +43,37 @@ Run the TypeScript check:
 npm run lint
 ```
 
-Despite its name, this script runs `tsc --noEmit`, not ESLint.
-
 Build the static site:
 
 ```bash
 npm run build
 ```
 
-The Next.js configuration uses `output: "export"`, which writes the static site to `out/`. Run the TypeScript check separately: the build configuration skips type and lint errors.
+The app is configured for static export in `next.config.ts`, so the production output is written to `out/`.
 
 ## Repository structure
 
 ```text
 src/
   app/
-    globals.css       Global styles
-    layout.tsx        Root layout, theme initialization, and page metadata
-    page.tsx          Portfolio page
-    not-found.tsx     Not-found page
-  components/         Portfolio sections, navigation, theme controls, and command menu
+    globals.css       Global styles and theme setup
+    layout.tsx        Root layout and page metadata
+    page.tsx          Portfolio home page
+    not-found.tsx     Not-found route
+  components/         UI sections, navigation, command menu, and theme toggle
   data/
-    user.ts           Profile, skills, experience, projects, and contact data
+    user.ts           Content source for profile, projects, and experience
 public/
-  logos/              Organization logos
-next.config.ts        Next.js configuration
+  logos/              Organization and partner logos
+next.config.ts        Static export configuration
+metadata.json         App metadata used by the client shell
 ```
 
-`src/App.tsx` and `index.html` contain a separate React entry layout. The Next.js page is in `src/app/page.tsx`.
+## Customization
 
-## Customize
+- Update `src/data/user.ts` for profile, experience, project, and contact details.
+- Update components in `src/components/` for layout and interactive behavior.
+- Update `src/app/layout.tsx` for page metadata.
+- Update `src/app/globals.css` for styling changes.
 
-- Update `src/data/user.ts` to change profile details, skills, experience, projects, education, and social links.
-- Update components in `src/components/` to change individual sections or interactions.
-- Update `src/app/layout.tsx` to change the page title and social metadata.
-- Update `src/app/globals.css` to change global styles.
-- Place organization logos in `public/logos/`.
-
-## Connect
-
-Contact and social links are maintained in `src/data/user.ts` and displayed on the website.
+This project intentionally does not include any backend server or API routes; it is a pure frontend application.
