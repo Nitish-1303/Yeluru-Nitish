@@ -12,3 +12,10 @@
     color-scheme: dark;
   }
 }
+
+@media (hover: hover) and (pointer: fine) {
+  html,
+  html *:not(input):not(textarea):not(select):not([contenteditable="true"]) {
+    cursor: url("/figma-cursor.svg") 2 2, auto;
+  }
+}
