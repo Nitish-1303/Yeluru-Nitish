@@ -63,12 +63,17 @@ export function Hero() {
             <div>
               <h1 className="text-xl sm:text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
                 {userData.name}
-                <span className="block mt-1 text-sm sm:text-base font-medium text-neutral-600 dark:text-neutral-400">
-                  Full-Stack Developer &amp; GenAI Engineer
-                </span>
               </h1>
+              <p className="mt-1 text-sm sm:text-base font-medium text-neutral-700 dark:text-neutral-300">
+                Full-stack &amp; GenAI engineer - shipping voice AI in production
+                at Ethos, with merged PRs in Reflex and Magnitude.
+              </p>
             </div>
           </div>
+
+          <p className="text-xs sm:text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            Open to founding engineer roles at US startups (remote from India).
+          </p>
 
           {/* Flipping one-liners ticker */}
           <div className="h-6 sm:h-7 overflow-hidden text-xs sm:text-sm font-mono text-neutral-600 dark:text-neutral-400 flex items-center">
