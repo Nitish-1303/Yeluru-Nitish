@@ -142,6 +142,14 @@ export function CommandMenu({ isOpen, onClose }: CommandMenuProps) {
       action: () => scrollToSection("opensource"),
     },
     {
+      id: "nav-testimonials",
+      title: "Testimonials",
+      subtitle: "Feedback from teams and maintainers",
+      category: "Navigation",
+      icon: Compass,
+      action: () => scrollToSection("testimonials"),
+    },
+    {
       id: "nav-education",
       title: "Education",
       subtitle: "Baba Institute of Technology & Sciences",
