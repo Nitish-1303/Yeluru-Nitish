@@ -5,7 +5,7 @@ export function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contact Nitish on WhatsApp"
-      className="fixed right-4 bottom-4 sm:right-6 sm:bottom-6 z-50 flex size-12 items-center justify-center border border-stone-300 bg-[#faf8f4] text-[#245b46] transition-colors hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#245b46]"
+      className="fixed right-4 bottom-4 sm:right-6 sm:bottom-6 z-50 flex size-12 items-center justify-center border border-stone-300 bg-[#faf8f4] text-[#245b46] transition-colors hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#245b46] dark:border-neutral-700 dark:bg-neutral-900 dark:text-emerald-400 dark:hover:bg-neutral-800 dark:focus-visible:outline-emerald-400"
     >
       <svg
         aria-hidden="true"
