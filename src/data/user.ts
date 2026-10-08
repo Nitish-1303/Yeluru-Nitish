@@ -144,8 +144,9 @@ export const userData: UserData = {
   },
   about: {
     paragraphs: [
-      "I'm a full-stack and GenAI engineer focused on developer tooling, intelligent workflows, and reliable web applications.",
-      "Currently building PatchBay, exploring LLM evaluation systems, and breaking down fast-moving AI developments on YouTube.",
+      "I'm Nitish Yeluru (Yeluru Nitish), a full-stack developer and GenAI engineer from India. I build AI-powered developer tools and LLM products end to end - Next.js, React, TypeScript on the front, Python and FastAPI on the back.",
+      "I currently work on the voice AI platform behind AskEthos at Ethos. I'm also the founder of PatchBay, an AI agent that monitors third-party APIs for breaking changes and opens verified fix PRs on GitHub.",
+      "As an open source contributor, I have merged PRs in Reflex, Magnitude, ParadeDB and InsForge. I share what I build on my YouTube channel BuildWithNitish, and I'm open to founding engineer and AI engineer roles.",
     ],
   },
   // Draft stack for trimming (Milestone 2)
