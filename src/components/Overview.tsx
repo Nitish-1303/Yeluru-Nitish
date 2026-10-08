@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Copy, Check, Clock, MapPin, Briefcase, Sparkles } from "lucide-react";
+import { Copy, Check, Clock, MapPin, Briefcase } from "lucide-react";
 import { userData } from "../data/user.ts";
 
 export function Overview() {
@@ -66,10 +66,15 @@ export function Overview() {
           </div>
           <div className="flex flex-wrap items-center gap-2 pt-0.5">
             <span className="inline-flex items-center gap-1.5 px-2 py-0.5 text-xs font-medium rounded-md bg-neutral-900 text-neutral-50 dark:bg-neutral-100 dark:text-neutral-900">
-              <Sparkles className="w-3 h-3 text-amber-400 dark:text-amber-600" />
+              <span className="w-4 h-4 rounded-sm bg-white p-0.5 shrink-0">
+                <img src="/logos/stealth.png" alt="" aria-hidden="true" className="w-full h-full object-contain" />
+              </span>
               {userData.status.founderRole}
             </span>
-            <span className="inline-flex items-center px-2 py-0.5 text-xs font-medium rounded-md bg-neutral-200/70 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">
+            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 text-xs font-medium rounded-md bg-neutral-200/70 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">
+              <span className="w-4 h-4 rounded-sm bg-white p-0.5 shrink-0">
+                <img src="/logos/alignerr.png" alt="" aria-hidden="true" className="w-full h-full object-contain" />
+              </span>
               {userData.status.pastRole}
             </span>
           </div>
