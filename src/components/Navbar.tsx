@@ -41,20 +41,6 @@ export function Navbar({ onOpenCommandMenu }: NavbarProps) {
       }`}
     >
       <div className="max-w-2xl mx-auto px-4 h-14 flex items-center justify-between gap-3">
-        {/* Left: Original NY Logo Mark */}
-        <a
-          href="#hero"
-          className="flex items-center gap-2 group cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 dark:focus-visible:outline-neutral-100 rounded-md"
-          aria-label="Nitish Yeluru - Go to top"
-        >
-          <div className="w-8 h-8 rounded-lg bg-neutral-900 dark:bg-neutral-100 text-neutral-50 dark:text-neutral-900 font-mono font-bold text-xs flex items-center justify-center tracking-tighter shadow-xs group-hover:scale-105 transition-transform">
-            NY
-          </div>
-          <span className="font-medium text-sm text-neutral-800 dark:text-neutral-200 hidden sm:inline-block tracking-tight">
-            Nitish Yeluru
-          </span>
-        </a>
-
         {/* Center: Desktop Nav Links */}
         <nav className="hidden md:flex items-center gap-1 text-xs text-neutral-600 dark:text-neutral-400">
           {navLinks.map((link) => (
