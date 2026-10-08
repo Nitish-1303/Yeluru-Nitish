@@ -1,6 +1,4 @@
 {
   "name": "Nitish Yeluru Portfolio",
-  "description": "Personal portfolio of Nitish Yeluru, Full-stack & GenAI engineer.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "description": "Personal portfolio of Nitish Yeluru, a full-stack engineer focused on developer tooling, web applications, and AI systems."
 }

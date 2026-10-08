@@ -171,8 +171,8 @@ export const userData: UserData = {
     {
       number: "04",
       title: "Backend & Databases",
-      description: "Microservices, async REST APIs, and database management",
-      items: ["FastAPI", "Node.js", "Express.js", "MongoDB", "REST APIs"],
+      description: "Microservices, async APIs, and database management",
+      items: ["FastAPI", "Node.js", "MongoDB", "REST APIs"],
     },
     {
       number: "05",
@@ -260,9 +260,9 @@ export const userData: UserData = {
       bullets: [
         "Architected and delivered a full-stack College Infrastructure Management System supporting 4 user roles (faculty, students, lab assistants, administrators) across 10+ academic departments.",
         "Implemented secure role-based access control (RBAC), image-enabled fault reporting, approval workflows, and automated low-stock alert systems.",
-        "Built and deployed the platform using the MERN stack (MongoDB, Express.js, React, Node.js) with modular backend services and scalable component design.",
+        "Built and deployed the platform using a full-stack JavaScript architecture with MongoDB, React, and Node.js, pairing responsive UX with secure operational workflows.",
       ],
-      skills: ["MERN Stack", "MongoDB", "Express.js", "React", "Node.js", "RBAC"],
+      skills: ["MERN Stack", "MongoDB", "React", "Node.js", "RBAC"],
       logoUrl: "/logos/smartinternz.png",
     },
     {

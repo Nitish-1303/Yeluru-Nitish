@@ -15,7 +15,6 @@ import {
   SiMongodb,
   SiNodedotjs,
   SiFastapi,
-  SiExpress,
   SiRos,
 } from "@icons-pack/react-simple-icons";
 import {
@@ -96,7 +95,6 @@ export function TechIcon({ name, className = "w-3.5 h-3.5" }: TechIconProps) {
   // Backend & DB
   if (norm.includes("fastapi")) return <SiFastapi className={className} />;
   if (norm.includes("node")) return <SiNodedotjs className={className} />;
-  if (norm.includes("express")) return <SiExpress className={className} />;
   if (norm.includes("mongo")) return <SiMongodb className={className} />;
   if (norm.includes("api") || norm.includes("rest")) return <Globe className={className} />;
 
