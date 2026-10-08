@@ -63,10 +63,10 @@ export function Hero() {
             <div>
               <h1 className="text-xl sm:text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
                 {userData.name}
+                <span className="block mt-1 text-sm sm:text-base font-medium text-neutral-600 dark:text-neutral-400">
+                  Full-Stack Developer &amp; GenAI Engineer
+                </span>
               </h1>
-              <p className="text-sm font-medium text-neutral-600 dark:text-neutral-400">
-                {userData.role}
-              </p>
             </div>
           </div>
 
