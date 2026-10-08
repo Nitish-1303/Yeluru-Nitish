@@ -4,8 +4,8 @@ export function About() {
   return (
     <section id="about" className="py-7 border-b border-neutral-200 dark:border-neutral-800/80">
       <div className="flex items-center justify-between mb-3">
-        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
-          About
+        <h2 className="text-sm font-semibold tracking-tight text-neutral-800 dark:text-neutral-200">
+          AI Engineer building LLM products, AI agents &amp; developer tools
         </h2>
         <span className="text-[11px] font-mono text-neutral-400 dark:text-neutral-500">
           Focus & Engineering

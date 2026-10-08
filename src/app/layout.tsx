@@ -3,18 +3,37 @@ import { Analytics } from "@vercel/analytics/next";
 import { WhatsAppButton } from "../components/WhatsAppButton.tsx";
 import "./globals.css";
 
+const siteUrl = "https://yeluru-nitish.vercel.app";
+const pageTitle = "Nitish Yeluru - Full-Stack & GenAI Engineer";
+const pageDescription =
+  "Portfolio of Nitish Yeluru (Yeluru Nitish), full-stack developer and GenAI engineer in India building AI agents, LLM products, developer tools and web applications with Next.js, React, TypeScript and Python.";
+
 export const metadata: Metadata = {
-  title: "Nitish Yeluru - Full-Stack & GenAI Engineer",
-  description: "Portfolio of Nitish Yeluru, full-stack and GenAI engineer building AI agents, developer tools and web applications.",
+  metadataBase: new URL(siteUrl),
+  title: pageTitle,
+  description: pageDescription,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Nitish Yeluru - Full-Stack & GenAI Engineer",
-    description: "Portfolio of Nitish Yeluru, full-stack and GenAI engineer building AI agents, developer tools and web applications.",
+    title: pageTitle,
+    description: pageDescription,
     type: "website",
+    url: siteUrl,
+    images: [
+      {
+        url: "/nitish.jpg",
+        width: 1264,
+        height: 842,
+        alt: "Nitish Yeluru",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nitish Yeluru - Full-Stack & GenAI Engineer",
-    description: "Portfolio of Nitish Yeluru, full-stack and GenAI engineer building AI agents, developer tools and web applications.",
+    title: pageTitle,
+    description: pageDescription,
+    images: ["/nitish.jpg"],
   },
   icons: {
     icon: [
@@ -24,6 +43,31 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-touch-icon.png",
   },
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Nitish Yeluru",
+  alternateName: "Yeluru Nitish",
+  jobTitle: "Full-Stack & GenAI Engineer",
+  url: siteUrl,
+  sameAs: ["https://github.com/Nitish-1303"],
+  knowsAbout: [
+    "Artificial Intelligence",
+    "Generative AI",
+    "LLM Engineering",
+    "Voice AI",
+    "AI Agents",
+    "Developer Tools",
+    "Full-Stack Development",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Python",
+    "FastAPI",
+    "Open Source",
+  ],
 };
 
 export default function RootLayout({
@@ -54,6 +98,12 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 antialiased selection:bg-neutral-900 selection:text-neutral-50 dark:selection:bg-neutral-100 dark:selection:text-neutral-900 min-h-screen">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema).replace(/</g, "\\u003c"),
+          }}
+        />
         {children}
         <WhatsAppButton />
         <Analytics />
