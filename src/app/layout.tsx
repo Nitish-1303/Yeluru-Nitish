@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: pageTitle,
   description: pageDescription,
+  verification: {
+    google: "BMeV2wHlKB6D4kCe1L1FaU-gDaVclbotL5twLNO1_f0",
+  },
   alternates: {
     canonical: "/",
   },
