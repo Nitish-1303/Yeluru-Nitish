@@ -2,8 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { Sun, Moon, Laptop } from "lucide-react";
-
-export type Theme = "light" | "dark" | "system";
+import {
+  applyTheme,
+  getStoredTheme,
+  setTheme as saveTheme,
+  type Theme,
+} from "../lib/theme.ts";
 
 export function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>("system");
@@ -11,39 +15,32 @@ export function ThemeToggle() {
 
   useEffect(() => {
     setMounted(true);
-    const saved = localStorage.getItem("theme") as Theme | null;
-    if (saved === "light" || saved === "dark" || saved === "system") {
-      setTheme(saved);
-      applyTheme(saved);
-    } else {
-      setTheme("system");
-      applyTheme("system");
-    }
-  }, []);
+    const saved = getStoredTheme();
+    setTheme(saved);
+    applyTheme(saved);
 
-  const applyTheme = (nextTheme: Theme) => {
-    const root = document.documentElement;
-    if (nextTheme === "system") {
-      const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      if (isDark) {
-        root.classList.add("dark");
-      } else {
-        root.classList.remove("dark");
-      }
-    } else if (nextTheme === "dark") {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
-  };
+    const handleThemeChange = (event: Event) => {
+      const nextTheme = (event as CustomEvent<Theme>).detail;
+      setTheme(nextTheme);
+    };
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleSystemThemeChange = () => {
+      if (getStoredTheme() === "system") applyTheme("system");
+    };
+
+    window.addEventListener("theme-change", handleThemeChange);
+    mediaQuery.addEventListener("change", handleSystemThemeChange);
+    return () => {
+      window.removeEventListener("theme-change", handleThemeChange);
+      mediaQuery.removeEventListener("change", handleSystemThemeChange);
+    };
+  }, []);
 
   const cycleTheme = () => {
     const sequence: Theme[] = ["light", "dark", "system"];
     const currentIndex = sequence.indexOf(theme);
     const nextTheme = sequence[(currentIndex + 1) % sequence.length];
-    setTheme(nextTheme);
-    localStorage.setItem("theme", nextTheme);
-    applyTheme(nextTheme);
+    saveTheme(nextTheme);
   };
 
   if (!mounted) {
