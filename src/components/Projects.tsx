@@ -99,7 +99,7 @@ export function Projects() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 text-xs font-mono text-neutral-900 dark:text-neutral-100 hover:underline underline-offset-4 decoration-neutral-400 transition-colors"
                       >
-                        <span>Visit {project.title} on YouTube</span>
+                        <span>{project.linkText ?? `View ${project.title}`}</span>
                         <ExternalLink className="w-3 h-3" />
                       </a>
                     </div>

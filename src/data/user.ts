@@ -82,6 +82,7 @@ export interface UserData {
     statusSummary: string;
     details: string[];
     link?: string;
+    linkText?: string;
   }[];
   openSource: {
     prNumber: number;
@@ -286,10 +287,151 @@ export const userData: UserData = {
   ],
   projects: [
     {
+      id: "flake-hunter",
+      title: "Flake Hunter",
+      badge: "Testing & Reliability",
+      statusSummary:
+        "A flaky-test diagnosis engine that replays failing tests across isolated sandboxes, ranks the worst offenders with statistical confidence, and presents a root-cause report alongside a proposed verified fix.",
+      details: [
+        "Built a full root-cause pipeline: evidence collection, patch proposal, and rerun validation unified in one interface",
+        "Applied Wilson confidence intervals to rank flaky tests by statistical significance instead of raw failure counts",
+        "Designed deterministic seeded-data runs so every diagnosis is reproducible and auditable",
+      ],
+      link: "https://github.com/Nitish-1303/flake-hunter",
+      linkText: "View repository",
+    },
+    {
+      id: "cookbook-canary",
+      title: "Cookbook Canary",
+      badge: "Developer Tools",
+      statusSummary:
+        "A documentation-quality tool that executes a repository's code examples in isolated microVMs to prove they still run, catching broken docs before users do.",
+      details: [
+        "Architected a TypeScript CLI and execution orchestration layer that isolates every run in its own microVM",
+        "Added headless browser checks to validate rendered examples, not just code paths",
+        "Backed the tool with 125 tests and real report artifacts proving the pipeline end to end",
+      ],
+      link: "https://github.com/Nitish-1303/cookbook-canary",
+      linkText: "View repository",
+    },
+    {
+      id: "cipherbill",
+      title: "CipherBill",
+      badge: "Starknet",
+      statusSummary:
+        "A privacy-first invoicing prototype on Starknet where balances stay shielded, transfers stay private, and receipts are revealed selectively to accountants or auditors.",
+      details: [
+        "Integrated Starknet wallet APIs into a TypeScript/Next.js application",
+        "Built the shielded-balance and private-transfer interface end to end",
+        "Designed a selective-disclosure model so financial privacy and auditability coexist",
+      ],
+      link: "https://github.com/Nitish-1303/CipherBill",
+      linkText: "View repository",
+    },
+    {
+      id: "lumina",
+      title: "Lumina",
+      badge: "AI Assistant",
+      statusSummary:
+        "A concept build for an AI personal assistant in the iMessage idiom, with a fully working in-browser simulator driven by a Gemini-backed agent loop.",
+      details: [
+        "Structured a React, TypeScript and Vite application around a realistic chat simulator",
+        "Implemented a Gemini-backed agent loop handling multi-turn conversational flows",
+        "Shipped assistant features for briefings, goal tracking and proactive recommendations",
+      ],
+      link: "https://github.com/Nitish-1303/lumina-OS",
+      linkText: "View repository",
+    },
+    {
+      id: "proof-of-humanity",
+      title: "Proof-of-Humanity PoC",
+      badge: "Open Source",
+      statusSummary:
+        "A standalone proof-of-concept that verifies real human contributors in an open-source contribution pool using signed commits and cryptographic challenges.",
+      details: [
+        "Built Python registry parsing and validation for contributor records",
+        "Wired signed-commit verification directly into GitHub Actions CI",
+        "Implemented an email nonce challenge verified with SHA-256 digests",
+      ],
+      link: "https://github.com/Nitish-1303/poh-poc",
+      linkText: "View repository",
+    },
+    {
+      id: "recallproof",
+      title: "RecallProof",
+      badge: "AI Agents",
+      statusSummary:
+        "An experimental FastAPI service that stress-tests memory retrieval and update reliability for AI agent memory systems.",
+      details: [
+        "Built memory ingestion and recall endpoints backed by HydraDB",
+        "Designed an evaluation flow that compares old versus updated memories after edits",
+        "Returns retrieved evidence, latency metrics and a pass/fail verdict per test",
+      ],
+      link: "https://github.com/Nitish-1303/Recallops-Nitish",
+      linkText: "View repository",
+    },
+    {
+      id: "playlistbid",
+      title: "PlaylistBid",
+      badge: "Payments",
+      statusSummary:
+        "A fan-built paid song-position board where listeners bid for playlist placement, with payments verified server-side before any board update.",
+      details: [
+        "Integrated Spotify track metadata and embedded playback into the product flow",
+        "Calculated prices server-side and managed payment transaction state securely",
+        "Verified payment webhooks by signature before touching the board order",
+      ],
+      link: "https://github.com/Nitish-1303/Spotify-Playlist-Bidding",
+      linkText: "View repository",
+    },
+    {
+      id: "trellis-order-workflow",
+      title: "Trellis Order Workflow Orchestration",
+      badge: "Temporal",
+      statusSummary:
+        "A distributed order and shipping orchestration system built on FastAPI, Temporal and PostgreSQL, modeling real production workflow patterns.",
+      details: [
+        "Implemented a parent order workflow handling approval and cancellation signals",
+        "Split shipping into a child workflow on its own task queue for clean isolation",
+        "Containerized the full stack with Docker Compose for one-command reproducibility",
+      ],
+      link: "https://github.com/Nitish-1303/Trelli-Home-Assignment---Yeluru-Nitish",
+      linkText: "View repository",
+    },
+    {
+      id: "fingerframe-live",
+      title: "fingerframe-live",
+      badge: "Computer Vision",
+      statusSummary:
+        "A real-time hand-framing demo that renders a live AI video effect inside a frame you draw with your fingers in front of the camera.",
+      details: [
+        "Implemented MediaPipe hand tracking with smoothing and dropout handling for a stable frame",
+        "Built WebRTC video transformation with canvas compositing at interactive frame rates",
+        "Added live prompt switching so the effect changes without breaking the camera session",
+      ],
+      link: "https://github.com/Nitish-1303/fingerframe-live",
+      linkText: "View repository",
+    },
+    {
+      id: "college-infrastructure-management",
+      title: "College Infrastructure Management System",
+      badge: "Team Project",
+      statusSummary:
+        "A full-stack MERN application, built as a team, for managing campus equipment, fault reports and approvals across departments.",
+      details: [
+        "Implemented role-based access control for students, faculty and admins",
+        "Built department-level equipment records with a complete issue-reporting flow",
+        "Delivered approval chains, reporting views and notification workflows",
+      ],
+      link: "https://github.com/Nitish-1303/Batch-24-College-Infrastructure-Management-system-",
+      linkText: "View repository",
+    },
+    {
       id: "patchbay",
       title: "PatchBay",
-      badge: "In Development",
-      statusSummary: "GitHub App detecting breaking API changes and generating verified fix PRs.",
+      badge: "Working offline prototype",
+      statusSummary:
+        "An AI agent that monitors third-party APIs for breaking changes and opens verified fix PRs on GitHub.",
       details: [
         "Solo founder project. The offline prototype functions locally to inspect API deprecations and generate fixes.",
         "Designed to continuously monitor downstream dependencies against upstream API changelogs.",
@@ -306,6 +448,7 @@ export const userData: UserData = {
         "Focuses on concise, practical breakdowns of emerging AI tools and agent frameworks.",
       ],
       link: "https://www.youtube.com/@buildwithnitish",
+      linkText: "Visit YouTube channel",
     },
   ],
   openSource: [
