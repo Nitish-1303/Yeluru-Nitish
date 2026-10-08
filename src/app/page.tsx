@@ -31,7 +31,7 @@ export default function Home() {
       <Navbar onOpenCommandMenu={() => setCommandMenuOpen(true)} />
 
       {/* Main Column: narrow centered editorial layout (max-w-2xl ~672px) */}
-      <main className="flex-1 w-full max-w-2xl mx-auto px-4 sm:px-6">
+      <main className="flex-1 w-full max-w-2xl mx-auto px-4 pb-20 sm:px-6 sm:pb-0">
         {/* 2. Hero Section */}
         <Hero />
 
