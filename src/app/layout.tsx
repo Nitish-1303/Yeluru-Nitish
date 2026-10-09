@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { WhatsAppButton } from "../components/WhatsAppButton.tsx";
+import { socialHref } from "../data/socials.ts";
 import "./globals.css";
 
 const siteUrl = "https://yeluru-nitish.vercel.app";
@@ -56,7 +57,7 @@ const personSchema = {
   alternateName: "Yeluru Nitish",
   jobTitle: "Full-Stack & GenAI Engineer",
   url: siteUrl,
-  sameAs: ["https://github.com/Nitish-1303"],
+  sameAs: [socialHref("github")],
   knowsAbout: [
     "Artificial Intelligence",
     "Generative AI",
