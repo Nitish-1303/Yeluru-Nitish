@@ -142,6 +142,14 @@ export function CommandMenu({ isOpen, onClose }: CommandMenuProps) {
       action: () => scrollToSection("opensource"),
     },
     {
+      id: "nav-github-activity",
+      title: "GitHub Activity",
+      subtitle: "Contribution graph, repositories, and followers",
+      category: "Navigation",
+      icon: Compass,
+      action: () => scrollToSection("github-activity"),
+    },
+    {
       id: "nav-testimonials",
       title: "Testimonials",
       subtitle: "Feedback from teams and maintainers",
