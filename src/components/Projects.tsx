@@ -95,8 +95,8 @@ export function Projects() {
                     <div className="pt-2">
                       <a
                         href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        target={project.link.startsWith("#") ? undefined : "_blank"}
+                        rel={project.link.startsWith("#") ? undefined : "noopener noreferrer"}
                         className="inline-flex items-center gap-1.5 text-xs font-mono text-neutral-900 dark:text-neutral-100 hover:underline underline-offset-4 decoration-neutral-400 transition-colors"
                       >
                         <span>{project.linkText ?? `View ${project.title}`}</span>

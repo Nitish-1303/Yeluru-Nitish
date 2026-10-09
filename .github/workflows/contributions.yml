@@ -1,0 +1,124 @@
+name: Update contributions
+
+on:
+  schedule:
+    - cron: "17 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-contributions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Fetch and validate contribution data
+        env:
+          GH_CONTRIB_PAT: ${{ secrets.GH_CONTRIB_PAT }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ -z "${GH_CONTRIB_PAT:-}" ]]; then
+            echo "::error::GH_CONTRIB_PAT is not configured"
+            exit 1
+          fi
+
+          temp_dir="$(mktemp -d)"
+          trap 'rm -rf "$temp_dir"' EXIT
+          response_file="$temp_dir/response.json"
+          output_file="$temp_dir/contributions.json"
+
+          query="$(cat <<'GRAPHQL'
+          query {
+            user(login: "Nitish-1303") {
+              contributionsCollection {
+                restrictedContributionsCount
+                contributionCalendar {
+                  totalContributions
+                  weeks {
+                    contributionDays {
+                      contributionCount
+                      date
+                      contributionLevel
+                    }
+                  }
+                }
+              }
+            }
+          }
+          GRAPHQL
+          )"
+
+          request="$(jq -n --arg query "$query" '{query: $query}')"
+          curl --fail --silent --show-error \
+            -X POST https://api.github.com/graphql \
+            -H "Authorization: bearer ${GH_CONTRIB_PAT}" \
+            -H "Content-Type: application/json" \
+            --data "$request" \
+            --output "$response_file"
+
+          if jq -e '(.errors? != null) or (.data.user.contributionsCollection? == null)' "$response_file" >/dev/null; then
+            echo "::error::GitHub GraphQL returned errors or no contribution data"
+            jq -c '{errors: .errors, hasData: (.data != null)}' "$response_file"
+            exit 1
+          fi
+
+          if ! jq -e '
+            .data.user.contributionsCollection as $collection
+            | ($collection.restrictedContributionsCount | type == "number")
+              and ($collection.contributionCalendar.totalContributions | type == "number")
+              and ($collection.contributionCalendar.weeks | type == "array" and length > 0)
+              and all($collection.contributionCalendar.weeks[];
+                (.contributionDays | type == "array" and length > 0)
+                and all(.contributionDays[];
+                  (.contributionCount | type == "number")
+                  and (.date | type == "string")
+                  and (.contributionLevel | type == "string")
+                )
+              )
+          ' "$response_file" >/dev/null; then
+            echo "::error::GitHub GraphQL response has an invalid contribution calendar"
+            exit 1
+          fi
+
+          generated_at="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          jq --arg generatedAt "$generated_at" '
+            .data.user.contributionsCollection.contributionCalendar
+            | {
+                generatedAt: $generatedAt,
+                totalContributions: .totalContributions,
+                weeks: [
+                  .weeks[] | {
+                    contributionDays: [
+                      .contributionDays[] | {
+                        contributionCount,
+                        date,
+                        contributionLevel
+                      }
+                    ]
+                  }
+                ]
+              }
+          ' "$response_file" > "$output_file"
+
+          mkdir -p public
+          mv "$output_file" public/contributions.json
+
+      - name: Commit updated contribution data
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add public/contributions.json
+          if git diff --cached --quiet -- public/contributions.json; then
+            echo "Contribution data has not changed."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: update contributions"
+          git push

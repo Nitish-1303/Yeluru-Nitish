@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { Navbar } from "./Navbar.tsx";
 import { Hero } from "./Hero.tsx";
 import { Overview } from "./Overview.tsx";
+import { BuildLog } from "./BuildLog.tsx";
+import { PatchBaySection } from "./PatchBaySection.tsx";
 import { About } from "./About.tsx";
 import { Stack } from "./Stack.tsx";
 import { Experience } from "./Experience.tsx";
@@ -13,12 +15,21 @@ import { GitHubActivity } from "./GitHubActivity.tsx";
 import { Organizations } from "./Organizations.tsx";
 import { Testimonials } from "./Testimonials.tsx";
 import { Education } from "./Education.tsx";
+import { LookingForSection } from "./LookingForSection.tsx";
+import { Contributions } from "./Contributions.tsx";
 import { Contact } from "./Contact.tsx";
 import { Footer } from "./Footer.tsx";
 import { CommandMenu } from "./CommandMenu.tsx";
 import type { GitHubStats } from "../lib/github-stats.ts";
+import type { ContributionData } from "../lib/contributions.ts";
 
-export function HomeContent({ githubStats }: { githubStats: GitHubStats }) {
+export function HomeContent({
+  githubStats,
+  contributions,
+}: {
+  githubStats: GitHubStats;
+  contributions: ContributionData | null;
+}) {
   const [commandMenuOpen, setCommandMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -34,15 +45,19 @@ export function HomeContent({ githubStats }: { githubStats: GitHubStats }) {
       <main className="flex-1 w-full max-w-2xl mx-auto px-4 pb-20 sm:px-6 sm:pb-0">
         <Hero />
         <Overview />
+        <BuildLog />
+        <PatchBaySection />
         <About />
         <Stack />
         <Experience />
         <Projects />
         <OpenSource />
         <GitHubActivity stats={githubStats} />
+        <Contributions data={contributions} />
         <Organizations />
         <Testimonials />
         <Education />
+        <LookingForSection />
         <Contact />
       </main>
 

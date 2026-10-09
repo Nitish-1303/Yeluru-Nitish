@@ -146,7 +146,7 @@ export const userData: UserData = {
   about: {
     paragraphs: [
       "I'm Nitish Yeluru (Yeluru Nitish), a full-stack developer and GenAI engineer from India. I build AI-powered developer tools and LLM products end to end - Next.js, React, TypeScript on the front, Python and FastAPI on the back.",
-      "I currently work on the voice AI platform behind AskEthos at Ethos. I'm also the founder of PatchBay, an AI agent that monitors third-party APIs for breaking changes and opens verified fix PRs on GitHub.",
+      "I currently work on the voice AI platform behind AskEthos at Ethos. I'm also building PatchBay, a solo-founder project. Its offline prototype demonstrates a red-to-green test loop; it is not deployed yet.",
       "As an open source contributor, I have merged PRs in Reflex, Magnitude, ParadeDB and InsForge. I share what I build on my YouTube channel BuildWithNitish, and I'm open to founding engineer and AI engineer roles.",
     ],
   },
@@ -429,14 +429,14 @@ export const userData: UserData = {
     {
       id: "patchbay",
       title: "PatchBay",
-      badge: "Working offline prototype",
+      badge: "Offline prototype",
       statusSummary:
-        "An AI agent that monitors third-party APIs for breaking changes and opens verified fix PRs on GitHub.",
+        "Building a GitHub App to detect breaking third-party API changes and open a fix PR backed by test evidence.",
       details: [
-        "Solo founder project. The offline prototype functions locally to inspect API deprecations and generate fixes.",
-        "Designed to continuously monitor downstream dependencies against upstream API changelogs.",
-        "Currently an unreleased prototype; not yet in production or live on the GitHub Marketplace.",
+        "Proven on an offline red-to-green test loop. Not deployed yet.",
       ],
+      link: "#what-im-building",
+      linkText: "What I'm building",
     },
     {
       id: "buildwithnitish",

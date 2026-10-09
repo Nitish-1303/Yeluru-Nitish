@@ -28,6 +28,7 @@ export function Navbar({ onOpenCommandMenu }: NavbarProps) {
     { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#projects" },
     { label: "Open Source", href: "#opensource" },
+    { label: "Contributions", href: "#contributions" },
     { label: "Testimonials", href: "#testimonials" },
     { label: "Contact", href: "#contact" },
   ];

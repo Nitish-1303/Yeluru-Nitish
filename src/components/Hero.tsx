@@ -154,6 +154,21 @@ export function Hero() {
               <ArrowUpRight className="w-3 h-3 opacity-60" />
             </a>
           </div>
+
+          <nav aria-label="Featured sections" className="flex flex-wrap gap-x-4 gap-y-1 pt-1 text-xs font-medium text-stone-700 dark:text-neutral-300">
+            <a
+              href="#work-with-me"
+              className="underline decoration-stone-300 underline-offset-4 hover:decoration-stone-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-700 dark:decoration-neutral-700 dark:hover:decoration-neutral-300 dark:focus-visible:outline-neutral-300"
+            >
+              Work with me
+            </a>
+            <a
+              href="#what-im-building"
+              className="underline decoration-stone-300 underline-offset-4 hover:decoration-stone-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-700 dark:decoration-neutral-700 dark:hover:decoration-neutral-300 dark:focus-visible:outline-neutral-300"
+            >
+              What I'm building
+            </a>
+          </nav>
         </div>
 
         {/* Right column: Original isometric wireframe blocks */}
