@@ -1,7 +1,6 @@
 import { GitMerge, ExternalLink } from "lucide-react";
 import { userData } from "../data/user.ts";
 import { OrgLogo } from "./OrgLogo.tsx";
-import { FollowMe } from "./FollowMe.tsx";
 
 export function OpenSource() {
   return (
@@ -69,7 +68,6 @@ export function OpenSource() {
           </div>
         ))}
       </div>
-      <FollowMe />
     </section>
   );
 }

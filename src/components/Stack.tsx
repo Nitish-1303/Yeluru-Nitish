@@ -1,6 +1,5 @@
 import { userData } from "../data/user.ts";
 import { TechIcon } from "./TechIcon.tsx";
-import { FollowMe } from "./FollowMe.tsx";
 
 export function Stack() {
   return (
@@ -47,7 +46,6 @@ export function Stack() {
           </div>
         ))}
       </div>
-      <FollowMe />
     </section>
   );
 }

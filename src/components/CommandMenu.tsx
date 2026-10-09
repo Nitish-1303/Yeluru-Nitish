@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { Search, Compass, ExternalLink, Moon, Sun, Laptop, X } from "lucide-react";
-import { socialHref } from "../data/socials.ts";
+import { userData } from "../data/user.ts";
 import { setTheme as saveTheme } from "../lib/theme.ts";
 
 interface CommandMenuProps {
@@ -219,7 +219,7 @@ export function CommandMenu({ isOpen, onClose }: CommandMenuProps) {
       subtitle: "github.com/Nitish-1303",
       category: "Social & Contact",
       icon: ExternalLink,
-      action: () => openUrl(socialHref("github")),
+      action: () => openUrl(userData.socials.github),
     },
     {
       id: "social-linkedin",
@@ -227,7 +227,7 @@ export function CommandMenu({ isOpen, onClose }: CommandMenuProps) {
       subtitle: "linkedin.com/in/yeluru-nitish",
       category: "Social & Contact",
       icon: ExternalLink,
-      action: () => openUrl(socialHref("linkedin")),
+      action: () => openUrl(userData.socials.linkedin),
     },
     {
       id: "social-x",
@@ -235,7 +235,7 @@ export function CommandMenu({ isOpen, onClose }: CommandMenuProps) {
       subtitle: "@Vibe_User",
       category: "Social & Contact",
       icon: ExternalLink,
-      action: () => openUrl(socialHref("x")),
+      action: () => openUrl(userData.socials.x),
     },
     {
       id: "social-youtube",
@@ -243,7 +243,7 @@ export function CommandMenu({ isOpen, onClose }: CommandMenuProps) {
       subtitle: "@buildwithnitish",
       category: "Social & Contact",
       icon: ExternalLink,
-      action: () => openUrl(socialHref("youtube")),
+      action: () => openUrl(userData.socials.youtube),
     },
     {
       id: "social-topmate",
@@ -251,7 +251,7 @@ export function CommandMenu({ isOpen, onClose }: CommandMenuProps) {
       subtitle: "Book a technical conversation",
       category: "Social & Contact",
       icon: ExternalLink,
-      action: () => openUrl(socialHref("topmate")),
+      action: () => openUrl(userData.socials.topmate),
     },
     {
       id: "theme-light",

@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { Github, Search, Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle.tsx";
 import { userData } from "../data/user.ts";
-import { socialHref } from "../data/socials.ts";
 
 interface NavbarProps {
   onOpenCommandMenu: () => void;
@@ -73,7 +72,7 @@ export function Navbar({ onOpenCommandMenu }: NavbarProps) {
 
           {/* GitHub link */}
           <a
-            href={socialHref("github")}
+            href={userData.socials.github}
             target="_blank"
             rel="noopener noreferrer"
             className="w-8 h-8 rounded-md flex items-center justify-center text-neutral-600 dark:text-neutral-400 hover:text-neutral-950 dark:hover:text-neutral-100 hover:bg-neutral-200/60 dark:hover:bg-neutral-800/60 transition-colors"

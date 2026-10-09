@@ -1,6 +1,3 @@
-import { FollowMe } from "./FollowMe.tsx";
-import { socialHref } from "../data/socials.ts";
-
 const testimonials = [
   {
     quote:
@@ -87,7 +84,7 @@ export function Testimonials() {
           </p>
           <div className="border-t border-stone-200 pt-3 dark:border-neutral-800">
             <a
-              href={socialHref("github")}
+              href="https://github.com/Nitish-1303"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-semibold text-stone-900 underline decoration-stone-300 underline-offset-4 hover:decoration-stone-700 dark:text-neutral-100 dark:decoration-neutral-700 dark:hover:decoration-neutral-300"
@@ -97,7 +94,6 @@ export function Testimonials() {
           </div>
         </article>
       </div>
-      <FollowMe />
     </section>
   );
 }

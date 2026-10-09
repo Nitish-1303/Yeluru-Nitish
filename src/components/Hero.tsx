@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Github, Linkedin, Youtube, Mail, Calendar, ArrowUpRight } from "lucide-react";
 import { userData } from "../data/user.ts";
-import { socialHref } from "../data/socials.ts";
 import { WireframeBlocks } from "./WireframeBlocks.tsx";
 
 // Clean custom X (formerly Twitter) icon
@@ -100,7 +99,7 @@ export function Hero() {
           {/* Social links row */}
           <div className="flex flex-wrap items-center gap-2 pt-1">
             <a
-              href={socialHref("github")}
+              href={userData.socials.github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub (Nitish-1303)"
@@ -111,7 +110,7 @@ export function Hero() {
             </a>
 
             <a
-              href={socialHref("linkedin")}
+              href={userData.socials.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn (yeluru-nitish)"
@@ -122,7 +121,7 @@ export function Hero() {
             </a>
 
             <a
-              href={socialHref("x")}
+              href={userData.socials.x}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="X profile (@Vibe_User)"
@@ -133,7 +132,7 @@ export function Hero() {
             </a>
 
             <a
-              href={socialHref("youtube")}
+              href={userData.socials.youtube}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube (@buildwithnitish)"
@@ -144,7 +143,7 @@ export function Hero() {
             </a>
 
             <a
-              href={socialHref("topmate")}
+              href={userData.contact.topmate}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Topmate 1:1 sessions"

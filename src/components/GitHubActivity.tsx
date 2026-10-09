@@ -1,5 +1,4 @@
 import type { GitHubStats } from "../lib/github-stats.ts";
-import { socialHref } from "../data/socials.ts";
 
 export function GitHubActivity({ stats }: { stats: GitHubStats }) {
   return (
@@ -17,7 +16,7 @@ export function GitHubActivity({ stats }: { stats: GitHubStats }) {
       </div>
 
       <a
-        href={socialHref("github")}
+        href="https://github.com/Nitish-1303"
         target="_blank"
         rel="noopener noreferrer"
         className="block border border-stone-200 bg-[#faf8f4] p-3 sm:p-4 dark:border-neutral-800 dark:bg-neutral-900"

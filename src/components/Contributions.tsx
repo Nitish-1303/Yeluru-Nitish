@@ -6,7 +6,6 @@ import type {
   ContributionDay,
   ContributionLevel,
 } from "../lib/contributions.ts";
-import { FollowMe } from "./FollowMe.tsx";
 
 const cellColors: Record<ContributionLevel, string> = {
   NONE: "bg-stone-200 dark:bg-neutral-800",
@@ -161,7 +160,6 @@ export function Contributions({ data }: { data: ContributionData | null }) {
         ))}
         <span>More</span>
       </div>
-      <FollowMe />
     </section>
   );
 }

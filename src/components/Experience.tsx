@@ -1,7 +1,6 @@
 import { Briefcase, MapPin, Calendar, Lock } from "lucide-react";
 import { userData } from "../data/user.ts";
 import { TechIcon } from "./TechIcon.tsx";
-import { FollowMe } from "./FollowMe.tsx";
 
 export function Experience() {
   return (
@@ -122,7 +121,6 @@ export function Experience() {
           </div>
         ))}
       </div>
-      <FollowMe />
     </section>
   );
 }

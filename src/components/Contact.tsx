@@ -1,7 +1,5 @@
 import { Mail, Calendar, ArrowUpRight } from "lucide-react";
 import { userData } from "../data/user.ts";
-import { socialHref } from "../data/socials.ts";
-import { FollowMe } from "./FollowMe.tsx";
 
 export function Contact() {
   return (
@@ -44,7 +42,7 @@ export function Contact() {
 
           {/* Topmate button */}
           <a
-            href={socialHref("topmate")}
+            href={userData.contact.topmate}
             target="_blank"
             rel="noopener noreferrer"
             className="p-3.5 rounded-lg border border-neutral-200/90 dark:border-neutral-800/90 bg-neutral-100/30 dark:bg-neutral-900/30 hover:bg-neutral-100 dark:hover:bg-neutral-800/60 transition-colors flex items-center justify-between group"
@@ -66,7 +64,6 @@ export function Contact() {
           </a>
         </div>
       </div>
-      <FollowMe />
     </section>
   );
 }

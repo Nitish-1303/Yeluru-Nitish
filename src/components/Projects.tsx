@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { ChevronDown, ExternalLink, GitBranch, Youtube } from "lucide-react";
 import { userData } from "../data/user.ts";
-import { FollowMe } from "./FollowMe.tsx";
 
 export function Projects() {
   // First item open by default for immediate context, user can toggle both
@@ -111,7 +110,6 @@ export function Projects() {
           );
         })}
       </div>
-      <FollowMe />
     </section>
   );
 }

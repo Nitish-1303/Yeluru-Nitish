@@ -1,5 +1,4 @@
 import { userData } from "../data/user.ts";
-import { FollowMe } from "./FollowMe.tsx";
 
 export function About() {
   return (
@@ -25,7 +24,6 @@ export function About() {
           className="w-full max-w-sm aspect-[4/3] sm:aspect-[3/4] object-cover object-[68%_center] border border-neutral-200 dark:border-neutral-800"
         />
       </div>
-      <FollowMe />
     </section>
   );
 }

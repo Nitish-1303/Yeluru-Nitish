@@ -1,5 +1,3 @@
-import { socialHref } from "./socials.ts";
-
 /**
  * Centralized portfolio data for Nitish Yeluru.
  * Components render directly from this single source of truth.
@@ -7,6 +5,12 @@ import { socialHref } from "./socials.ts";
  * NOTE: Unset items (photo, education dates) are explicitly marked as null
  * so components render intentional, graceful fallbacks without leaking TODO markers.
  */
+
+export interface SocialLink {
+  label: string;
+  href: string;
+  iconName: 'github' | 'linkedin' | 'x' | 'youtube' | 'topmate' | 'mail';
+}
 
 export interface OverviewFact {
   label: string;
@@ -26,8 +30,18 @@ export interface UserData {
   };
   contact: {
     email: string;
+    topmate: string;
     closingDraft: string; // Awaiting user wording; UI defaults to clean "Get in touch" CTA
   };
+  socials: {
+    github: string;
+    linkedin: string;
+    x: string;
+    youtube: string;
+    topmate: string;
+    email: string;
+  };
+  socialLinks: SocialLink[];
   status: {
     founderRole: string; // "Founder @ PatchBay"
     pastRole: string;    // "Ex-Alignerr"
@@ -98,8 +112,24 @@ export const userData: UserData = {
   },
   contact: {
     email: "yelurunitish006@gmail.com",
+    topmate: "https://topmate.io/yeluru_nitish",
     closingDraft: "Open to compelling engineering roles and technical collaborations.",
   },
+  socials: {
+    github: "https://github.com/Nitish-1303",
+    linkedin: "https://linkedin.com/in/yeluru-nitish",
+    x: "https://x.com/Vibe_User",
+    youtube: "https://www.youtube.com/@buildwithnitish",
+    topmate: "https://topmate.io/yeluru_nitish",
+    email: "mailto:yelurunitish006@gmail.com",
+  },
+  socialLinks: [
+    { label: "GitHub", href: "https://github.com/Nitish-1303", iconName: "github" },
+    { label: "LinkedIn", href: "https://linkedin.com/in/yeluru-nitish", iconName: "linkedin" },
+    { label: "X", href: "https://x.com/Vibe_User", iconName: "x" },
+    { label: "YouTube", href: "https://www.youtube.com/@buildwithnitish", iconName: "youtube" },
+    { label: "Topmate", href: "https://topmate.io/yeluru_nitish", iconName: "topmate" },
+  ],
   status: {
     founderRole: "Stealth Startup (NDA)",
     pastRole: "Alignerr (AI Eval)",
@@ -417,7 +447,7 @@ export const userData: UserData = {
         "Educational channel covering recent advancements across generative AI and modern engineering tools.",
         "Focuses on concise, practical breakdowns of emerging AI tools and agent frameworks.",
       ],
-      link: socialHref("youtube"),
+      link: "https://www.youtube.com/@buildwithnitish",
       linkText: "Visit YouTube channel",
     },
   ],
