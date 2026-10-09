@@ -1,23 +1,6 @@
-export type ExperienceItemType = {
-  id: string;
-  companyName: string;
-  companyLogo?: string;
-  companyWebsite?: string;
-  isCurrentEmployer?: boolean;
-  positions: {
-    id: string;
-    title: string;
-    employmentPeriod: {
-      start: string; // MM.YYYY
-      end?: string; // MM.YYYY
-    };
-    employmentType?: string;
-    description?: string; // markdown
-    icon?: React.ReactNode;
-    skills?: string[];
-    isExpanded?: boolean;
-  }[];
-};
+import type { ExperienceItemType } from "@/components/work-experience";
+
+export type { ExperienceItemType };
 
 export const experiences: ExperienceItemType[] = [
   {
