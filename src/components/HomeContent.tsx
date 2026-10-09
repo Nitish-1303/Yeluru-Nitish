@@ -10,6 +10,7 @@ import { Experience } from "./Experience.tsx";
 import { Projects } from "./Projects.tsx";
 import { OpenSource } from "./OpenSource.tsx";
 import { GitHubActivity } from "./GitHubActivity.tsx";
+import { Organizations } from "./Organizations.tsx";
 import { Testimonials } from "./Testimonials.tsx";
 import { Education } from "./Education.tsx";
 import { Contact } from "./Contact.tsx";
@@ -39,6 +40,7 @@ export function HomeContent({ githubStats }: { githubStats: GitHubStats }) {
         <Projects />
         <OpenSource />
         <GitHubActivity stats={githubStats} />
+        <Organizations />
         <Testimonials />
         <Education />
         <Contact />
