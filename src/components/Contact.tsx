@@ -1,7 +1,14 @@
-import { Mail, Calendar, ArrowUpRight } from "lucide-react";
+"use client";
+
+import { Calendar, ArrowUpRight } from "lucide-react";
+import { StatusButton } from "@/components/status-button";
 import { userData } from "../data/user.ts";
 
 export function Contact() {
+  const handleCopyEmail = async () => {
+    await navigator.clipboard.writeText(userData.contact.email);
+  };
+
   return (
     <section id="contact" className="py-7 border-b border-neutral-200 dark:border-neutral-800/80">
       <div className="flex items-center justify-between mb-4">
@@ -19,26 +26,14 @@ export function Contact() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-          {/* Email button */}
-          <a
-            href={`mailto:${userData.contact.email}`}
-            className="p-3.5 rounded-lg border border-neutral-200/90 dark:border-neutral-800/90 bg-neutral-100/30 dark:bg-neutral-900/30 hover:bg-neutral-100 dark:hover:bg-neutral-800/60 transition-colors flex items-center justify-between group"
+          {/* Email copy button */}
+          <StatusButton
+            onClick={handleCopyEmail}
+            successLabel="Copied"
+            className="rounded-sm border border-neutral-200/90 dark:border-neutral-800/90 bg-neutral-100/30 dark:bg-neutral-900/30 hover:bg-neutral-100 dark:hover:bg-neutral-800/60 transition-colors justify-start text-left h-auto p-3.5"
           >
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-md bg-neutral-200/60 dark:bg-neutral-800 flex items-center justify-center text-neutral-700 dark:text-neutral-300">
-                <Mail className="w-4 h-4" />
-              </div>
-              <div className="text-left">
-                <div className="text-xs font-medium text-neutral-900 dark:text-neutral-100">
-                  Email
-                </div>
-                <div className="text-[11px] font-mono text-neutral-500 dark:text-neutral-400">
-                  {userData.contact.email}
-                </div>
-              </div>
-            </div>
-            <ArrowUpRight className="w-4 h-4 text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors" />
-          </a>
+            <span className="text-xs font-medium text-neutral-900 dark:text-neutral-100">Copy email</span>
+          </StatusButton>
 
           {/* Topmate button */}
           <a

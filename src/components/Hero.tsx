@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Github, Linkedin, Youtube, Mail, Calendar, ArrowUpRight } from "lucide-react";
+import { Github, Linkedin, Youtube, Calendar, ArrowUpRight } from "lucide-react";
+import { AppleHelloEffectNitish } from "@/components/apple-hello-effect-nitish";
 import { userData } from "../data/user.ts";
 import { WireframeBlocks } from "./WireframeBlocks.tsx";
 
@@ -18,11 +19,18 @@ function XIcon({ className }: { className?: string }) {
 export function Hero() {
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [showHello, setShowHello] = useState(true);
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
     setReducedMotion(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
+    if (mq.matches) {
+      setShowHello(false); // Skip animation for reduced motion
+    }
+    const handler = (e: MediaQueryListEvent) => {
+      setReducedMotion(e.matches);
+      if (e.matches) setShowHello(false);
+    };
     mq.addEventListener("change", handler);
     return () => mq.removeEventListener("change", handler);
   }, []);
@@ -37,6 +45,16 @@ export function Hero() {
 
   return (
     <section id="hero" className="pt-6 sm:pt-10 pb-8 border-b border-neutral-200 dark:border-neutral-800/80">
+      {/* Apple Hello Effect - plays once on load, settles into the page */}
+      {showHello && (
+        <div className="mb-6">
+          <AppleHelloEffectNitish
+            onAnimationComplete={() => setShowHello(false)}
+            durationScale={0.8}
+          />
+        </div>
+      )}
+
       <div className="flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-6 sm:gap-8">
         {/* Left column: Name, Avatar fallback, Role, Flipping phrases, Socials */}
         <div className="flex-1 space-y-4">
@@ -62,7 +80,7 @@ export function Hero() {
 
             <div>
               <h1 className="text-xl sm:text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
-                {userData.name}
+                NITISH
               </h1>
               <p className="mt-1 text-sm sm:text-base font-medium text-neutral-700 dark:text-neutral-300">
                 Full-stack &amp; GenAI engineer - shipping voice AI in production
@@ -71,9 +89,13 @@ export function Hero() {
             </div>
           </div>
 
-          <p className="text-xs sm:text-sm font-medium text-neutral-700 dark:text-neutral-300">
-            Open to founding engineer roles at US startups (remote from India).
-          </p>
+          <a 
+            href="#contact"
+            className="flex items-center gap-2 text-xs sm:text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+          >
+            <span className="inline-block w-2 h-2 rounded-full bg-emerald-600 shrink-0" aria-hidden="true" />
+            <span>Open to founding engineer roles at US startups (remote from India)</span>
+          </a>
 
           {/* Flipping one-liners ticker */}
           <div className="h-6 sm:h-7 overflow-hidden text-xs sm:text-sm font-mono text-neutral-600 dark:text-neutral-400 flex items-center">
