@@ -45,13 +45,14 @@ export const experiences: ExperienceItemType[] = [
     id: "alignerr",
     companyName: "Alignerr",
     companyLogo: "/logos/alignerr.png",
-    isCurrentEmployer: true,
+    isCurrentEmployer: false,
     positions: [
       {
         id: "ai-evaluation",
         title: "Senior Software Engineer — AI Evaluation & Benchmarks",
         employmentPeriod: {
           start: "05.2026",
+          end: "08.2026",
         },
         employmentType: "Part-time",
         description: `Evaluating reinforcement learning policies in MuJoCo simulation environments and benchmark tasks.
