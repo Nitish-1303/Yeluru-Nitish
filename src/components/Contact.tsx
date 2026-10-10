@@ -1,12 +1,20 @@
 "use client";
 
+import { useState } from "react";
 import { Calendar, ArrowUpRight } from "lucide-react";
 import { StatusButton } from "@/components/status-button";
+import { MeetingScheduler } from "@/components/ui/meeting-scheduler";
 import { userData } from "../data/user.ts";
 
 export function Contact() {
+  const [schedulerKey, setSchedulerKey] = useState(0);
+
   const handleCopyEmail = async () => {
     await navigator.clipboard.writeText(userData.contact.email);
+  };
+
+  const handleScheduleMeeting = () => {
+    window.open(userData.contact.topmate, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -57,6 +65,18 @@ export function Contact() {
             </div>
             <ArrowUpRight className="w-4 h-4 text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors" />
           </a>
+        </div>
+
+        <div className="pt-2">
+          <MeetingScheduler
+            key={schedulerKey}
+            title="Book a slot"
+            description="Pick a date range, then continue to Topmate to confirm."
+            scheduleButtonText="Continue on Topmate"
+            cancelButtonText="Clear"
+            onSchedule={handleScheduleMeeting}
+            onCancel={() => setSchedulerKey((k) => k + 1)}
+          />
         </div>
       </div>
     </section>

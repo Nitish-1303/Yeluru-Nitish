@@ -187,13 +187,12 @@ export const MeetingScheduler: React.FC<MeetingSchedulerProps> = ({
                   isBefore(day, endDate);
 
                 return (
-                  <motion.button
+                  <button
+                    type="button"
                     key={day.toString()}
                     onClick={() => handleDateClick(day)}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
                     className={cn(
-                      "relative h-10 w-10 rounded-full flex items-center justify-center transition-colors duration-200",
+                      "relative h-10 w-10 rounded-full flex items-center justify-center transition-transform duration-150 hover:scale-105 active:scale-95",
                       !isSameMonth(day, currentMonth) &&
                         "text-muted-foreground/50",
                       isSameDay(day, new Date()) && "text-primary font-bold",
@@ -208,7 +207,7 @@ export const MeetingScheduler: React.FC<MeetingSchedulerProps> = ({
                     {isInRange && (
                       <div className="absolute inset-0 bg-primary/20" />
                     )}
-                  </motion.button>
+                  </button>
                 );
               })}
             </div>
