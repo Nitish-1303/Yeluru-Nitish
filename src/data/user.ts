@@ -147,7 +147,7 @@ export const userData: UserData = {
     paragraphs: [
       "I'm Nitish Yeluru (Yeluru Nitish), a full-stack developer and GenAI engineer from India. I build AI-powered developer tools and LLM products end to end - Next.js, React, TypeScript on the front, Python and FastAPI on the back.",
       "I currently work on the voice AI platform behind AskEthos at Ethos. I'm also building PatchBay, a solo-founder project. Its offline prototype demonstrates a red-to-green test loop; it is not deployed yet.",
-      "As an open source contributor, I have merged PRs in Reflex, Magnitude, ParadeDB and InsForge. I share what I build on my YouTube channel BuildWithNitish, and I'm open to founding engineer and AI engineer roles.",
+      "As an open source contributor, I have merged PRs in Reflex, Magnitude and Gitea. I share what I build on my YouTube channel BuildWithNitish, and I'm open to founding engineer and AI engineer roles.",
     ],
   },
   // Draft stack for trimming (Milestone 2)
