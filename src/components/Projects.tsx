@@ -1,6 +1,7 @@
 "use client";
 
 import { ExternalLink } from "lucide-react";
+import { ProjectVideo } from "./ProjectVideo";
 
 type FeaturedProject = {
   id: string;
@@ -98,14 +99,10 @@ export function Projects() {
             </div>
 
             <div className="space-y-1">
-              <video
-                controls
-                preload="metadata"
-                playsInline
-                className="aspect-video w-full rounded-lg border border-stone-200 bg-stone-950/5"
-              >
-                <source src={project.video} type="video/mp4" />
-              </video>
+              <ProjectVideo
+                src={project.video}
+                poster={`/videos/posters/${project.id}.jpg`}
+              />
               <p className="text-[11px] font-mono text-stone-600">
                 {project.videoNote}
               </p>
