@@ -10,8 +10,6 @@ const organizations = [
     organizations: [
       { name: "Reflex", pr: "PR #7275", href: "https://github.com/reflex-dev/reflex/pull/7275" },
       { name: "Magnitude", pr: "PR #120", href: "https://github.com/magnitudedev/magnitude/pull/120" },
-      { name: "ParadeDB", pr: "PR #6447", href: "https://github.com/paradedb/paradedb/pull/6447" },
-      { name: "InsForge", pr: "PR #2115", href: "https://github.com/InsForge/InsForge/pull/2115" },
     ],
   },
 ];

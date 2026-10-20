@@ -125,7 +125,7 @@ export function Testimonials() {
       </Marquee>
 
       <p className="mt-4 text-xs text-stone-600 dark:text-neutral-400">
-        Merged PRs in Reflex and Magnitude. Open PRs in ParadeDB and InsForge.{" "}
+        Merged PRs in Reflex and Magnitude.{" "}
         <a
           href="https://github.com/Nitish-1303"
           target="_blank"
