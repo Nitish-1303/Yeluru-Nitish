@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://yeluru-nitish.vercel.app";
+const siteUrl = "https://www.yelurunitish.tech";
 
 export const dynamic = "force-static";
 

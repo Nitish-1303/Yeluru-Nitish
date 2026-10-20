@@ -1,15 +1,14 @@
 # Nitish Yeluru | Portfolio
 
-A static frontend portfolio for Nitish Yeluru, built with Next.js and exported as a pure client-side site.
+A static frontend portfolio for Nitish Yeluru, built with Next.js and exported as a pure client-side site. Live at [yelurunitish.tech](https://www.yelurunitish.tech).
 
 ## Features
 
-- Responsive single-column portfolio layout
-- Light, dark, and system theme support
-- Searchable command menu with keyboard shortcuts
-- Experience timeline, project sections, and education details
+- Responsive single-column portfolio layout in a warm light editorial style
+- Hero, proof, projects, open source, and contact sections tuned for a 30-second read
+- Merged open-source PR showcase with links to the real pull requests
 - Social links and contact CTA
-- Static export pipeline for deployment to GitHub Pages or any static host
+- Static export pipeline for deployment to Vercel or any static host
 
 ## Stack
 
@@ -60,9 +59,9 @@ src/
     layout.tsx        Root layout and page metadata
     page.tsx          Portfolio home page
     not-found.tsx     Not-found route
-  components/         UI sections, navigation, command menu, and theme toggle
+  components/         UI sections and navigation
   data/
-    user.ts           Content source for profile, projects, and experience
+    user.ts           Content source for profile, projects, and open source work
 public/
   logos/              Organization and partner logos
 next.config.ts        Static export configuration
@@ -71,7 +70,7 @@ metadata.json         App metadata used by the client shell
 
 ## Customization
 
-- Update `src/data/user.ts` for profile, experience, project, and contact details.
+- Update `src/data/user.ts` for profile, project, open source, and contact details.
 - Update components in `src/components/` for layout and interactive behavior.
 - Update `src/app/layout.tsx` for page metadata.
 - Update `src/app/globals.css` for styling changes.
