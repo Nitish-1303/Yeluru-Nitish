@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     url: "/",
     images: [
       {
-        url: "/og-card.png",
-        width: 1200,
-        height: 630,
+        url: "/nitish.jpg",
+        width: 1264,
+        height: 842,
         alt: "Nitish Yeluru",
       },
     ],
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
-    images: ["/og-card.png"],
+    images: ["/nitish.jpg"],
   },
   icons: {
     icon: [
