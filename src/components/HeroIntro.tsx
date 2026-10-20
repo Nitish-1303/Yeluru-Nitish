@@ -10,15 +10,16 @@ export function HeroIntro() {
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
     setReducedMotion(mq.matches);
-    if (mq.matches) {
-      setShowHello(false); // Skip animation for reduced motion
-    }
+    if (mq.matches) setShowHello(false);
     const handler = (e: MediaQueryListEvent) => {
       setReducedMotion(e.matches);
       if (e.matches) setShowHello(false);
     };
     mq.addEventListener("change", handler);
-    return showHello && !reducedMotion ? (
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  return showHello && !reducedMotion ? (
     <div className="mb-6">
       <AppleHelloEffectNitish
         onAnimationComplete={() => setShowHello(false)}
