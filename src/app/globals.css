@@ -1,4 +1,9 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+
+/* Only shipped UI contributes utility classes; unused component demos do not. */
+@source "../components/{Navbar,Hero,HeroIntro,WireframeBlocks,HomeContent,Proof,Projects,ProjectVideo,OpenSource,OrgLogo,Contact,Footer,WhatsAppButton}.tsx";
+@source "./{layout,page,not-found}.tsx";
+@source "../../components/apple-hello-effect-nitish.tsx";
 
 @plugin "@tailwindcss/typography";
 

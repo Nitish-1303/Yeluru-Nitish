@@ -2,9 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { Github, Menu, X } from "lucide-react";
-import { userData } from "../data/user.ts";
 
-export function Navbar() {
+export function Navbar({ githubUrl }: { githubUrl: string }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -56,7 +55,7 @@ export function Navbar() {
         {/* Right: GitHub + mobile toggle */}
         <div className="flex items-center gap-1.5">
           <a
-            href={userData.socials.github}
+            href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="w-8 h-8 rounded-md flex items-center justify-center text-stone-600 hover:text-stone-950 hover:bg-stone-200/60 transition-colors"
