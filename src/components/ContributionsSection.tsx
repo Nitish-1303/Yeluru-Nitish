@@ -56,10 +56,10 @@ export function ContributionsSection() {
       className="scroll-mt-20 py-7 border-b border-neutral-200 dark:border-neutral-800/80"
     >
       <div className="flex items-center justify-between gap-3 mb-3">
-        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
           Contributions
         </h2>
-        <span className="text-[11px] font-mono text-neutral-400 dark:text-neutral-500">
+        <span className="text-[11px] font-mono text-neutral-600 dark:text-neutral-500">
           Past year
         </span>
       </div>

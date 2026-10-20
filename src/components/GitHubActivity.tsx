@@ -10,7 +10,7 @@ export function GitHubActivity({ stats }: { stats: GitHubStats }) {
         <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-stone-900 dark:text-neutral-50">
           GitHub Activity
         </h2>
-        <span className="text-[11px] font-mono text-stone-500 dark:text-neutral-400 text-right">
+        <span className="text-[11px] font-mono text-stone-600 dark:text-neutral-400 text-right">
           Open Source in Motion
         </span>
       </div>

@@ -10,7 +10,7 @@ export function Footer() {
 
   return (
     <footer className="w-full border-t border-neutral-200/80 dark:border-neutral-800/80 py-8 mt-6">
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500 dark:text-neutral-400">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-600 dark:text-neutral-400">
         <div className="flex items-center gap-2 flex-wrap text-center sm:text-left">
           <span>© {new Date().getFullYear()} {userData.name}</span>
         </div>

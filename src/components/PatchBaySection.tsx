@@ -20,7 +20,7 @@ export function PatchBaySection() {
 
       <dl className="divide-y divide-neutral-200 dark:divide-neutral-800">
         <div className="grid grid-cols-1 gap-1.5 py-3 sm:grid-cols-[8rem_minmax(0,1fr)] sm:gap-4">
-          <dt className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+          <dt className="text-[11px] font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
             {patchBayContent.problem.label}
           </dt>
           <dd className="text-sm leading-relaxed text-stone-700 dark:text-neutral-300">
@@ -28,7 +28,7 @@ export function PatchBaySection() {
           </dd>
         </div>
         <div className="grid grid-cols-1 gap-1.5 py-3 sm:grid-cols-[8rem_minmax(0,1fr)] sm:gap-4">
-          <dt className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+          <dt className="text-[11px] font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
             {patchBayContent.approach.label}
           </dt>
           <dd className="text-sm leading-relaxed text-stone-700 dark:text-neutral-300">
@@ -36,7 +36,7 @@ export function PatchBaySection() {
           </dd>
         </div>
         <div className="grid grid-cols-1 gap-1.5 py-3 sm:grid-cols-[8rem_minmax(0,1fr)] sm:gap-4">
-          <dt className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+          <dt className="text-[11px] font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
             {patchBayContent.currentStatus.label}
           </dt>
           <dd>

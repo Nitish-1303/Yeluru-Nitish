@@ -68,10 +68,10 @@ export function Projects() {
   return (
     <section id="projects" className="py-7 border-b border-stone-200">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xs font-mono uppercase tracking-wider text-stone-500">
+        <h2 className="text-xs font-mono uppercase tracking-wider text-stone-600">
           Projects
         </h2>
-        <span className="text-[11px] font-mono text-stone-400">
+        <span className="text-[11px] font-mono text-stone-600">
           Building & Publishing
         </span>
       </div>
@@ -107,7 +107,7 @@ export function Projects() {
               >
                 <source src={project.video} type="video/mp4" />
               </video>
-              <p className="text-[11px] font-mono text-stone-400">
+              <p className="text-[11px] font-mono text-stone-600">
                 {project.videoNote}
               </p>
             </div>

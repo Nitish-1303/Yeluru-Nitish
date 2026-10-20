@@ -16,10 +16,10 @@ export function Proof() {
   return (
     <section id="proof" className="py-7 border-b border-stone-200">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xs font-mono uppercase tracking-wider text-stone-500">
+        <h2 className="text-xs font-mono uppercase tracking-wider text-stone-600">
           Proof
         </h2>
-        <span className="text-[11px] font-mono text-stone-400">
+        <span className="text-[11px] font-mono text-stone-600">
           Merged & Verifiable
         </span>
       </div>

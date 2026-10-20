@@ -5,10 +5,10 @@ export function Stack() {
   return (
     <section id="stack" className="py-7 border-b border-neutral-200 dark:border-neutral-800/80">
       <div className="flex items-center justify-between mb-5">
-        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
           Stack
         </h2>
-        <span className="text-[11px] font-mono text-neutral-400 dark:text-neutral-500">
+        <span className="text-[11px] font-mono text-neutral-600 dark:text-neutral-500">
           Tools & Technologies
         </span>
       </div>
@@ -18,7 +18,7 @@ export function Stack() {
           <div key={group.number} className="space-y-1.5">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5">
               <div className="flex items-center gap-2">
-                <span className="font-mono text-[11px] font-semibold text-neutral-400 dark:text-neutral-500">
+                <span className="font-mono text-[11px] font-semibold text-neutral-600 dark:text-neutral-500">
                   {group.number}
                 </span>
                 <span className="text-xs font-medium text-neutral-900 dark:text-neutral-100">
@@ -26,7 +26,7 @@ export function Stack() {
                 </span>
               </div>
               {group.description && (
-                <span className="text-[11px] text-neutral-500 dark:text-neutral-400 font-normal pl-6 sm:pl-0 sm:text-right">
+                <span className="text-[11px] text-neutral-600 dark:text-neutral-400 font-normal pl-6 sm:pl-0 sm:text-right">
                   {group.description}
                 </span>
               )}

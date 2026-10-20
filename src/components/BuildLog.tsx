@@ -25,10 +25,10 @@ export function BuildLog() {
       className="scroll-mt-20 py-7 border-b border-neutral-200 dark:border-neutral-800/80"
     >
       <div className="flex items-center justify-between mb-3">
-        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
           Now shipping
         </h2>
-        <span className="text-[11px] font-mono text-neutral-400 dark:text-neutral-500">
+        <span className="text-[11px] font-mono text-neutral-600 dark:text-neutral-500">
           Build log
         </span>
       </div>
@@ -41,7 +41,7 @@ export function BuildLog() {
           >
             <time
               dateTime={entry.date}
-              className="pt-0.5 text-[11px] font-mono text-neutral-500 dark:text-neutral-400"
+              className="pt-0.5 text-[11px] font-mono text-neutral-600 dark:text-neutral-400"
             >
               {formatDate(entry.date)}
             </time>
