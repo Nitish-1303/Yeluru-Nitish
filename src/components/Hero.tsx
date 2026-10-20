@@ -73,8 +73,9 @@ export function Hero() {
           </div>
 
           <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-normal">
-            React, TypeScript and Python. Open to remote engineering roles at US
-            startups, and Bengaluru hybrid.
+            I build AI products and full-stack systems that solve real
+            problems. Open to founding-engineer roles at early-stage startups,
+            remote or Bengaluru hybrid.
           </p>
 
           {/* Primary actions */}

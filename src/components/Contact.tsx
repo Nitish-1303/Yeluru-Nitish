@@ -15,8 +15,9 @@ export function Contact() {
 
       <div className="space-y-4">
         <p className="text-sm text-stone-700 leading-relaxed font-normal">
-          The fastest way to reach me is email. For a longer conversation, book
-          time on Topmate.
+          I'm interested in early-stage startup and founding-engineer work. The
+          fastest way to reach me is email. For a longer conversation, book time
+          on Topmate.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
