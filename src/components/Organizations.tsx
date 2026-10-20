@@ -2,7 +2,6 @@ const organizations = [
   {
     label: "Worked with",
     organizations: [
-      { name: "Ethos", description: "AskEthos voice AI" },
       { name: "Alignerr" },
     ],
   },

@@ -131,7 +131,7 @@ export const userData: UserData = {
     { label: "Topmate", href: "https://topmate.io/yeluru_nitish", iconName: "topmate" },
   ],
   status: {
-    founderRole: "Stealth Startup (NDA)",
+    founderRole: "Independent Projects",
     pastRole: "Alignerr (AI Eval)",
   },
   hero: {
@@ -146,7 +146,7 @@ export const userData: UserData = {
   about: {
     paragraphs: [
       "I'm Nitish Yeluru (Yeluru Nitish), a full-stack developer and GenAI engineer from India. I build AI-powered developer tools and LLM products end to end - Next.js, React, TypeScript on the front, Python and FastAPI on the back.",
-      "I currently work on the voice AI platform behind AskEthos at Ethos. I'm also building PatchBay, a solo-founder project. Its offline prototype demonstrates a red-to-green test loop; it is not deployed yet.",
+      "I currently work as a full-stack developer on independent projects. I'm also building PatchBay, a solo-founder project. Its offline prototype demonstrates a red-to-green test loop; it is not deployed yet.",
       "As an open source contributor, I have merged PRs in Reflex, Magnitude and Gitea. I share what I build on my YouTube channel BuildWithNitish, and I'm open to founding engineer and AI engineer roles.",
     ],
   },
@@ -191,25 +191,15 @@ export const userData: UserData = {
   ],
   experience: [
     {
-      company: "Stealth Startup",
-      role: "Full Stack Engineer",
-      employmentType: "Full-time",
-      period: "Nov 2024 – Present",
-      duration: "2 yrs",
-      location: "San Antonio, Texas Metropolitan Area · Remote",
+      company: "Independent Projects",
+      role: "Full-Stack Developer",
+      employmentType: "Self-employed",
+      period: "2025 – Present",
+      location: "India",
       isCurrent: true,
-      badge: "Under NDA",
       description:
-        "Building production AI products at a GenAI startup under NDA, owning development across frontend, backend, AI infrastructure, and cloud deployment.",
-      bullets: [
-        "Designed and deployed LLM-powered systems, including RAG pipelines, AI agents, prompt engineering workflows, and production AI integrations.",
-        "Built real-time Voice AI applications using Pipecat and Vapi, implementing low-latency audio streaming, conversation state management, and agent orchestration.",
-        "Developed and shipped end-to-end React, Next.js, TypeScript, FastAPI, Node.js, and Python applications for production environments.",
-        "Deployed and managed cloud infrastructure on Google Cloud Platform (Cloud Run, Pub/Sub, Cloud Storage) using Docker and automated CI/CD pipelines.",
-        "Worked directly with customers as a Forward Deployed Engineer, translating user feedback into production features and delivering improvements through rapid weekly release cycles.",
-      ],
-      skills: ["TypeScript", "React", "Next.js", "Node.js", "Python", "FastAPI", "Go", "GCP", "Docker", "Pipecat", "Vapi", "OpenAI", "Vertex AI"],
-      logoUrl: "/logos/stealth.png",
+        "Building and shipping full-stack projects: HealthyChef, CipherBill and a Migma x Spotify concept demo.",
+      skills: ["TypeScript", "React", "Next.js", "Node.js"],
     },
     {
       company: "Alignerr",
