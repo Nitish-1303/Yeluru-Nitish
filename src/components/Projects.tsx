@@ -24,8 +24,7 @@ const featuredProjects: FeaturedProject[] = [
     badge: "Concept demo",
     logo: "/logos/migma-icon.webp",
     logoAlt: "Migma logo",
-    video:
-      "https://github.com/user-attachments/assets/397a3595-c337-4a8a-a199-8e2f12e1830e",
+    video: "/videos/migma-demo.mp4",
     videoNote: "1:10 demo, with narration",
     description:
       "A Spicetify plugin concept for a gap Migma does not cover: artists cannot email the audience Spotify owns. It turns a playlist, track, show or artist roster into a ready-to-send Migma campaign without leaving the client. Three pieces: a TypeScript custom app, a zero-dependency Node proxy that holds the Migma key and swaps the Spotify session for a scoped one, and a live storyboard. All six campaign types reuse Migma's generate-and-poll pipeline; everything except final generation runs on the real Spotify API, the one spot no API covers is marked MOCK, and the proxy and client ship test suites. Concept demo, not an official Migma product.",
