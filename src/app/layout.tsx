@@ -3,15 +3,19 @@ import { Analytics } from "@vercel/analytics/next";
 import { WhatsAppButton } from "../components/WhatsAppButton.tsx";
 import "./globals.css";
 
-const siteUrl = "https://yeluru-nitish.vercel.app";
-const pageTitle = "Nitish Yeluru - Full-Stack & GenAI Engineer";
+const siteUrl = "https://www.yelurunitish.tech";
+const pageTitle = "Nitish Yeluru | Full-Stack & GenAI Engineer";
 const pageDescription =
-  "Portfolio of Nitish Yeluru (Yeluru Nitish), full-stack developer and GenAI engineer in India building AI agents, LLM products, developer tools and web applications with Next.js, React, TypeScript and Python.";
+  "Nitish Yeluru (Yeluru Nitish), full-stack and GenAI engineer in India. React, TypeScript and Python. Open to remote engineering roles at US startups.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: pageTitle,
   description: pageDescription,
+  robots: {
+    index: true,
+    follow: true,
+  },
   verification: {
     google: "BMeV2wHlKB6D4kCe1L1FaU-gDaVclbotL5twLNO1_f0",
   },
@@ -22,12 +26,12 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     type: "website",
-    url: siteUrl,
+    url: "/",
     images: [
       {
-        url: "/nitish.jpg",
-        width: 1264,
-        height: 842,
+        url: "/og-card.png",
+        width: 1200,
+        height: 630,
         alt: "Nitish Yeluru",
       },
     ],
@@ -36,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
-    images: ["/nitish.jpg"],
+    images: ["/og-card.png"],
   },
   icons: {
     icon: [
@@ -56,21 +60,17 @@ const personSchema = {
   alternateName: "Yeluru Nitish",
   jobTitle: "Full-Stack & GenAI Engineer",
   url: siteUrl,
-  sameAs: ["https://github.com/Nitish-1303"],
+  image: `${siteUrl}/nitish.jpg`,
+  sameAs: [
+    "https://github.com/Nitish-1303",
+    "https://linkedin.com/in/yeluru-nitish",
+  ],
   knowsAbout: [
-    "Artificial Intelligence",
-    "Generative AI",
-    "LLM Engineering",
-    "Voice AI",
-    "AI Agents",
-    "Developer Tools",
     "Full-Stack Development",
-    "Next.js",
+    "Generative AI",
     "React",
     "TypeScript",
     "Python",
-    "FastAPI",
-    "Open Source",
   ],
 };
 
@@ -80,15 +80,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var stored=localStorage.getItem('theme');var followsSystem=!stored||stored==='system';var isDark=stored==='dark'||(followsSystem&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(isDark){document.documentElement.classList.add('dark');}else{document.documentElement.classList.remove('dark');}}catch(e){}})();`,
-          }}
-        />
-      </head>
-      <body className="bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 antialiased selection:bg-neutral-900 selection:text-neutral-50 dark:selection:bg-neutral-100 dark:selection:text-neutral-900 min-h-screen">
+    <html lang="en">
+      <body className="bg-[#faf7f4] text-stone-900 antialiased selection:bg-stone-900 selection:text-stone-50 min-h-screen">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
