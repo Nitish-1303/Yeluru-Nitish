@@ -4,40 +4,19 @@ export type { ExperienceItemType };
 
 export const experiences: ExperienceItemType[] = [
   {
-    id: "stealth-startup",
-    companyName: "Stealth Startup",
-    companyLogo: "/logos/stealth.png",
+    id: "independent-projects",
+    companyName: "Independent Projects",
     isCurrentEmployer: true,
     positions: [
       {
-        id: "full-stack-engineer",
-        title: "Full Stack Engineer",
+        id: "full-stack-developer",
+        title: "Full-Stack Developer",
         employmentPeriod: {
-          start: "11.2024",
+          start: "2025",
         },
-        employmentType: "Full-time",
-        description: `Building production AI products at a GenAI startup under NDA, owning development across frontend, backend, AI infrastructure, and cloud deployment.
-
-- Designed and deployed LLM-powered systems, including RAG pipelines, AI agents, prompt engineering workflows, and production AI integrations.
-- Built real-time Voice AI applications using Pipecat and Vapi, implementing low-latency audio streaming, conversation state management, and agent orchestration.
-- Developed and shipped end-to-end React, Next.js, TypeScript, FastAPI, Node.js, and Python applications for production environments.
-- Deployed and managed cloud infrastructure on Google Cloud Platform (Cloud Run, Pub/Sub, Cloud Storage) using Docker and automated CI/CD pipelines.
-- Worked directly with customers as a Forward Deployed Engineer, translating user feedback into production features and delivering improvements through rapid weekly release cycles.`,
-        skills: [
-          "TypeScript",
-          "React",
-          "Next.js",
-          "Node.js",
-          "Python",
-          "FastAPI",
-          "Go",
-          "GCP",
-          "Docker",
-          "Pipecat",
-          "Vapi",
-          "OpenAI",
-          "Vertex AI",
-        ],
+        employmentType: "Self-employed",
+        description: `Building and shipping full-stack projects: HealthyChef, CipherBill and a Migma x Spotify concept demo.`,
+        skills: ["TypeScript", "React", "Next.js", "Node.js"],
       },
     ],
   },
