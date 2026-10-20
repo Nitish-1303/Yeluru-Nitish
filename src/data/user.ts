@@ -301,34 +301,6 @@ export const userData: UserData = {
       linkText: "View repository",
     },
     {
-      id: "cookbook-canary",
-      title: "Cookbook Canary",
-      badge: "Developer Tools",
-      statusSummary:
-        "A documentation-quality tool that executes a repository's code examples in isolated microVMs to prove they still run, catching broken docs before users do.",
-      details: [
-        "Architected a TypeScript CLI and execution orchestration layer that isolates every run in its own microVM",
-        "Added headless browser checks to validate rendered examples, not just code paths",
-        "Backed the tool with 125 tests and real report artifacts proving the pipeline end to end",
-      ],
-      link: "https://github.com/Nitish-1303/cookbook-canary",
-      linkText: "View repository",
-    },
-    {
-      id: "cipherbill",
-      title: "CipherBill",
-      badge: "Starknet",
-      statusSummary:
-        "A privacy-first invoicing prototype on Starknet where balances stay shielded, transfers stay private, and receipts are revealed selectively to accountants or auditors.",
-      details: [
-        "Integrated Starknet wallet APIs into a TypeScript/Next.js application",
-        "Built the shielded-balance and private-transfer interface end to end",
-        "Designed a selective-disclosure model so financial privacy and auditability coexist",
-      ],
-      link: "https://github.com/Nitish-1303/CipherBill",
-      linkText: "View repository",
-    },
-    {
       id: "lumina",
       title: "Lumina",
       badge: "AI Assistant",
@@ -368,20 +340,6 @@ export const userData: UserData = {
         "Returns retrieved evidence, latency metrics and a pass/fail verdict per test",
       ],
       link: "https://github.com/Nitish-1303/Recallops-Nitish",
-      linkText: "View repository",
-    },
-    {
-      id: "playlistbid",
-      title: "PlaylistBid",
-      badge: "Payments",
-      statusSummary:
-        "A fan-built paid song-position board where listeners bid for playlist placement, with payments verified server-side before any board update.",
-      details: [
-        "Integrated Spotify track metadata and embedded playback into the product flow",
-        "Calculated prices server-side and managed payment transaction state securely",
-        "Verified payment webhooks by signature before touching the board order",
-      ],
-      link: "https://github.com/Nitish-1303/Spotify-Playlist-Bidding",
       linkText: "View repository",
     },
     {
@@ -427,18 +385,6 @@ export const userData: UserData = {
       linkText: "View repository",
     },
     {
-      id: "patchbay",
-      title: "PatchBay",
-      badge: "Offline prototype",
-      statusSummary:
-        "Building a GitHub App to detect breaking third-party API changes and open a fix PR backed by test evidence.",
-      details: [
-        "Proven on an offline red-to-green test loop. Not deployed yet.",
-      ],
-      link: "#what-im-building",
-      linkText: "What I'm building",
-    },
-    {
       id: "buildwithnitish",
       title: "BuildWithNitish",
       badge: "YouTube Channel",
@@ -453,9 +399,17 @@ export const userData: UserData = {
   ],
   openSource: [
     {
+      prNumber: 39155,
+      repo: "go-gitea/gitea",
+      title: 'fix(web): populate the reason for "cannot commit to branch" in web editor commit form',
+      mergedDate: "August 28, 2026",
+      url: "https://github.com/go-gitea/gitea/pull/39155",
+      description: "Surfaced the actual failure reason when a web editor commit cannot target the chosen branch.",
+    },
+    {
       prNumber: 120,
       repo: "magnitudedev/magnitude",
-      title: "clamp inconsistent system memory observations",
+      title: "fix: clamp inconsistent system memory observations",
       mergedDate: "September 23, 2026",
       url: "https://github.com/magnitudedev/magnitude/pull/120",
       description: "Clamped inconsistent system memory observations across environment reporting.",
@@ -464,7 +418,7 @@ export const userData: UserData = {
     {
       prNumber: 125,
       repo: "magnitudedev/magnitude",
-      title: "apply the remote API-key gate to case-variant inference paths",
+      title: "fix(acn): apply remote API key gate to case-variant inference paths",
       mergedDate: "September 24, 2026",
       url: "https://github.com/magnitudedev/magnitude/pull/125",
       description: "Applied remote API-key gating consistently across case-variant inference paths.",
@@ -473,11 +427,27 @@ export const userData: UserData = {
     {
       prNumber: 7275,
       repo: "reflex-dev/reflex",
-      title: "point Reflex db commands at the db extra instead of dumping a traceback",
+      title: "Point reflex db commands at the db extra instead of dumping a traceback",
       mergedDate: "October 1, 2026",
       url: "https://github.com/reflex-dev/reflex/pull/7275",
       description: "Pointed Reflex database commands at the db extra dependency instead of dumping an unhandled traceback.",
       logoUrl: "/logos/reflex.png",
+    },
+    {
+      prNumber: 11634,
+      repo: "unslothai/unsloth",
+      title: "Studio: check loopback for an existing listener before taking the port",
+      mergedDate: "October 11, 2026",
+      url: "https://github.com/unslothai/unsloth/pull/11634",
+      description: "Checked loopback for an existing listener before Unsloth Studio binds the port.",
+    },
+    {
+      prNumber: 257,
+      repo: "neatlogs/neatroots",
+      title: "fix(steer): preserve OpenAI structured-output parse helpers",
+      mergedDate: "October 16, 2026",
+      url: "https://github.com/neatlogs/neatroots/pull/257",
+      description: "Preserved OpenAI structured-output parse helpers in the steer flow.",
     },
   ],
   education: {
