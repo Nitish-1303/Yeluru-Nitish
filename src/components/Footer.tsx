@@ -13,15 +13,6 @@ export function Footer() {
       <div className="max-w-2xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500 dark:text-neutral-400">
         <div className="flex items-center gap-2 flex-wrap text-center sm:text-left">
           <span>© {new Date().getFullYear()} {userData.name}</span>
-          <span>•</span>
-          <a
-            href="https://chanhdai.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-neutral-900 dark:hover:text-neutral-100 underline underline-offset-4 decoration-neutral-300 dark:decoration-neutral-700 transition-colors"
-          >
-            layout inspired by chanhdai.com
-          </a>
         </div>
 
         <button

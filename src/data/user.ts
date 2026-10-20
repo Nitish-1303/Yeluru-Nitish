@@ -162,7 +162,7 @@ export const userData: UserData = {
       number: "02",
       title: "AI & Voice Engineering",
       description: "LLM agent architectures, voice streaming, and policy benchmarking",
-      items: ["OpenAI", "Vertex AI", "RAG Pipelines", "AI Agents", "Pipecat", "Vapi", "MuJoCo"],
+      items: ["OpenAI", "Vertex AI", "RAG Pipelines", "AI Agents", "MuJoCo"],
     },
     {
       number: "03",
@@ -232,8 +232,8 @@ export const userData: UserData = {
       description:
         "Contributed bug fixes, performance improvements, and CI/CD workflow optimizations across open-source repositories.",
       bullets: [
-        "Contributed bug fixes, performance improvements, and developer documentation across 5+ open-source repositories with rapid merge cycles.",
-        "Reviewed and mentored contributions across 20+ pull requests, improving code quality and contributor onboarding.",
+        "Contributed bug fixes, performance improvements, and developer documentation across open-source repositories.",
+        "Reviewed and mentored community pull requests, improving code quality and contributor onboarding.",
         "Implemented CI/CD workflow optimizations using GitHub Actions, eliminating manual deployment tasks and reducing release overhead.",
       ],
       skills: ["Full-Stack Development", "Node.js", "GitHub Actions", "CI/CD"],
