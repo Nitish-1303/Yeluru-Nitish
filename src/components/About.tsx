@@ -21,6 +21,10 @@ export function About() {
         <img
           src="/nitish.jpg"
           alt="Nitish Yeluru"
+          width={768}
+          height={512}
+          loading="lazy"
+          decoding="async"
           className="w-full max-w-sm aspect-[4/3] sm:aspect-[3/4] object-cover object-[68%_center] border border-neutral-200 dark:border-neutral-800"
         />
       </div>
