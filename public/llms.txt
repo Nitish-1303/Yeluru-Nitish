@@ -1,0 +1,35 @@
+# Nitish Yeluru
+
+> Full-stack and GenAI engineer in India. Builds AI products and full-stack systems in React, TypeScript and Python. Open to founding-engineer roles at early-stage startups, remote with US teams.
+
+## Site
+
+- Portfolio: https://www.yelurunitish.tech/
+- Resume (PDF): https://www.yelurunitish.tech/resume.pdf
+
+## Contact
+
+- Email: yelurunitish006@gmail.com
+- Topmate (1:1 calls): https://topmate.io/yeluru_nitish
+- WhatsApp: https://wa.me/919676446375
+
+## Profiles
+
+- GitHub: https://github.com/Nitish-1303
+- LinkedIn: https://linkedin.com/in/yeluru-nitish
+- X: https://x.com/Vibe_User
+- YouTube: https://www.youtube.com/@buildwithnitish
+
+## Merged open-source PRs
+
+- Gitea: https://github.com/go-gitea/gitea/pull/39155
+- Reflex: https://github.com/reflex-dev/reflex/pull/7275
+- Unsloth: https://github.com/unslothai/unsloth/pull/11634
+- Magnitude: https://github.com/magnitudedev/magnitude/pull/120 and https://github.com/magnitudedev/magnitude/pull/125
+- neatroots: https://github.com/neatlogs/neatroots/pull/257
+
+## Projects
+
+- Migma x Spotify (concept demo): https://migma-wireframe.vercel.app/ and https://github.com/Nitish-1303/Migma
+- CipherBill (privacy payments on Starknet): https://cipher-bill.vercel.app/
+- HealthyChef (invoicing for meal-prep businesses): https://healthy-chef-ruddy.vercel.app and https://github.com/Nitish-1303/HealthyChef
