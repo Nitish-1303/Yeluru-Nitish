@@ -6,10 +6,10 @@ export function OpenSource() {
   return (
     <section id="opensource" className="py-7 border-b border-neutral-200 dark:border-neutral-800/80">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
           Open Source
         </h2>
-        <span className="text-[11px] font-mono text-neutral-400 dark:text-neutral-500">
+        <span className="text-[11px] font-mono text-neutral-600 dark:text-neutral-500">
           Merged Contributions
         </span>
       </div>
@@ -34,14 +34,14 @@ export function OpenSource() {
                     <span className="text-xs font-mono font-medium text-neutral-800 dark:text-neutral-200">
                       {pr.repo}
                     </span>
-                    <span className="text-xs font-mono text-neutral-400">#{pr.prNumber}</span>
+                    <span className="text-xs font-mono text-neutral-600">#{pr.prNumber}</span>
                     <span className="inline-flex items-center gap-1 text-[10px] font-mono px-1.5 py-0.5 rounded bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20">
                       <GitMerge className="w-2.5 h-2.5 shrink-0" />
                       Merged
                     </span>
                   </div>
 
-                  <span className="text-[11px] font-mono text-neutral-400 dark:text-neutral-500 shrink-0">
+                  <span className="text-[11px] font-mono text-neutral-600 dark:text-neutral-500 shrink-0">
                     {pr.mergedDate}
                   </span>
                 </div>

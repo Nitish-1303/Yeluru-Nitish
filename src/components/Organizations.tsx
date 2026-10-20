@@ -21,10 +21,10 @@ export function Organizations() {
       className="space-y-4 py-7 border-b border-neutral-200 dark:border-neutral-800/80"
     >
       <div className="flex items-center justify-between">
-        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
           Organizations
         </h2>
-        <span className="text-[11px] font-mono text-neutral-400 dark:text-neutral-500">
+        <span className="text-[11px] font-mono text-neutral-600 dark:text-neutral-500">
           Teams & Contributions
         </span>
       </div>
@@ -34,7 +34,7 @@ export function Organizations() {
           key={group.label}
           className="flex flex-col gap-1.5 sm:flex-row sm:items-baseline sm:gap-5"
         >
-          <h3 className="w-32 shrink-0 text-[11px] font-mono text-neutral-500 dark:text-neutral-400">
+          <h3 className="w-32 shrink-0 text-[11px] font-mono text-neutral-600 dark:text-neutral-400">
             {group.label}
           </h3>
           <ul className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
@@ -48,7 +48,7 @@ export function Organizations() {
                     className="underline decoration-stone-300 underline-offset-4 hover:decoration-stone-700 dark:decoration-neutral-700 dark:hover:decoration-neutral-300"
                   >
                     <span className="font-medium">{organization.name}</span>
-                    <span className="ml-1 text-xs font-mono text-neutral-500 dark:text-neutral-400">
+                    <span className="ml-1 text-xs font-mono text-neutral-600 dark:text-neutral-400">
                       {organization.pr}
                     </span>
                   </a>
@@ -56,7 +56,7 @@ export function Organizations() {
                   <span>
                     <span className="font-medium">{organization.name}</span>
                     {organization.description && (
-                      <span className="ml-1 text-xs text-neutral-500 dark:text-neutral-400">
+                      <span className="ml-1 text-xs text-neutral-600 dark:text-neutral-400">
                         ({organization.description})
                       </span>
                     )}

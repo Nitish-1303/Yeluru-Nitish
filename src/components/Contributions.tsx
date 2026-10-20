@@ -87,10 +87,10 @@ export function Contributions({ data }: { data: ContributionData | null }) {
       className="scroll-mt-20 py-7 border-b border-neutral-200 dark:border-neutral-800/80"
     >
       <div className="flex items-center justify-between gap-3 mb-3">
-        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
           Contributions
         </h2>
-        <span className="text-[11px] font-mono text-neutral-400 dark:text-neutral-500">
+        <span className="text-[11px] font-mono text-neutral-600 dark:text-neutral-500">
           Past year
         </span>
       </div>
@@ -113,7 +113,7 @@ export function Contributions({ data }: { data: ContributionData | null }) {
       >
         <div className="min-w-max">
           <div
-            className="mb-1 grid gap-[3px] text-[10px] font-mono text-neutral-500 dark:text-neutral-400"
+            className="mb-1 grid gap-[3px] text-[10px] font-mono text-neutral-600 dark:text-neutral-400"
             style={{
               gridTemplateColumns: `repeat(${data.weeks.length}, 9px)`,
             }}
@@ -153,7 +153,7 @@ export function Contributions({ data }: { data: ContributionData | null }) {
         </div>
       </div>
 
-      <div className="mt-2 flex items-center justify-end gap-1.5 text-[10px] font-mono text-neutral-500 dark:text-neutral-400">
+      <div className="mt-2 flex items-center justify-end gap-1.5 text-[10px] font-mono text-neutral-600 dark:text-neutral-400">
         <span>Less</span>
         {(["NONE", "FIRST_QUARTILE", "SECOND_QUARTILE", "THIRD_QUARTILE", "FOURTH_QUARTILE"] as const).map((level) => (
           <span key={level} className={`block h-[9px] w-[9px] rounded-[2px] ${cellColors[level]}`} />

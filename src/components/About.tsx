@@ -7,7 +7,7 @@ export function About() {
         <h2 className="text-sm font-semibold tracking-tight text-neutral-800 dark:text-neutral-200">
           AI Engineer building LLM products, AI agents &amp; developer tools
         </h2>
-        <span className="text-[11px] font-mono text-neutral-400 dark:text-neutral-500">
+        <span className="text-[11px] font-mono text-neutral-600 dark:text-neutral-500">
           Focus & Engineering
         </span>
       </div>

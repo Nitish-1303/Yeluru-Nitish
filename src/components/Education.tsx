@@ -5,10 +5,10 @@ export function Education() {
   return (
     <section id="education" className="py-7 border-b border-neutral-200 dark:border-neutral-800/80">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
           Education
         </h2>
-        <span className="text-[11px] font-mono text-neutral-400 dark:text-neutral-500">
+        <span className="text-[11px] font-mono text-neutral-600 dark:text-neutral-500">
           Academic Foundation
         </span>
       </div>
@@ -28,7 +28,7 @@ export function Education() {
             </p>
             {/* If dates were ever confirmed, they would render here. Kept unset per instructions */}
             {userData.education.dates && (
-              <p className="text-[11px] font-mono text-neutral-400">
+              <p className="text-[11px] font-mono text-neutral-600">
                 {userData.education.dates}
               </p>
             )}

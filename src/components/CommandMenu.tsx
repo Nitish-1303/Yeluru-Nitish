@@ -339,7 +339,7 @@ export function CommandMenu({ isOpen, onClose }: CommandMenuProps) {
               <X className="w-3.5 h-3.5" />
             </button>
           ) : (
-            <kbd className="px-1.5 py-0.5 text-[10px] font-mono text-neutral-500 bg-neutral-100 dark:bg-neutral-800 rounded border border-neutral-200 dark:border-neutral-700">
+            <kbd className="px-1.5 py-0.5 text-[10px] font-mono text-neutral-600 bg-neutral-100 dark:bg-neutral-800 rounded border border-neutral-200 dark:border-neutral-700">
               ESC
             </kbd>
           )}
@@ -351,7 +351,7 @@ export function CommandMenu({ isOpen, onClose }: CommandMenuProps) {
           className="max-h-72 overflow-y-auto p-2 divide-y divide-neutral-100 dark:divide-neutral-800/50"
         >
           {filteredItems.length === 0 ? (
-            <div className="py-8 text-center text-xs text-neutral-500">
+            <div className="py-8 text-center text-xs text-neutral-600">
               No matching commands found.
             </div>
           ) : (
@@ -375,13 +375,13 @@ export function CommandMenu({ isOpen, onClose }: CommandMenuProps) {
                     <div className="truncate">
                       <span className="font-medium">{item.title}</span>
                       {item.subtitle && (
-                        <span className="ml-2 text-xs text-neutral-400 dark:text-neutral-500 truncate">
+                        <span className="ml-2 text-xs text-neutral-600 dark:text-neutral-500 truncate">
                           {item.subtitle}
                         </span>
                       )}
                     </div>
                   </div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 dark:text-neutral-600 shrink-0 ml-2">
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-600 shrink-0 ml-2">
                     {item.category}
                   </span>
                 </button>
@@ -391,7 +391,7 @@ export function CommandMenu({ isOpen, onClose }: CommandMenuProps) {
         </div>
 
         {/* Footer shortcuts */}
-        <div className="px-4 py-2 border-t border-neutral-200 dark:border-neutral-800 bg-neutral-100/50 dark:bg-neutral-950/50 flex items-center justify-between text-[11px] text-neutral-400">
+        <div className="px-4 py-2 border-t border-neutral-200 dark:border-neutral-800 bg-neutral-100/50 dark:bg-neutral-950/50 flex items-center justify-between text-[11px] text-neutral-600">
           <div className="flex items-center gap-2">
             <span>Navigate</span>
             <kbd className="px-1 py-0.5 font-mono text-[9px] bg-neutral-200/60 dark:bg-neutral-800 rounded">↑</kbd>

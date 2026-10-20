@@ -6,10 +6,10 @@ export function Experience() {
   return (
     <section id="experience" className="py-7 border-b border-neutral-200 dark:border-neutral-800/80">
       <div className="flex items-center justify-between mb-5">
-        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
           Experience
         </h2>
-        <span className="text-[11px] font-mono text-neutral-400 dark:text-neutral-500">
+        <span className="text-[11px] font-mono text-neutral-600 dark:text-neutral-500">
           Career Track Record
         </span>
       </div>
@@ -59,7 +59,7 @@ export function Experience() {
                   )}
                 </div>
 
-                <div className="flex items-center gap-1.5 text-xs font-mono text-neutral-500 dark:text-neutral-400 shrink-0">
+                <div className="flex items-center gap-1.5 text-xs font-mono text-neutral-600 dark:text-neutral-400 shrink-0">
                   <Calendar className="w-3 h-3 text-neutral-400" />
                   <span>{item.period}</span>
                 </div>
@@ -72,7 +72,7 @@ export function Experience() {
                 {item.location && (
                   <>
                     <span className="text-neutral-300 dark:text-neutral-700">•</span>
-                    <span className="inline-flex items-center gap-1 text-neutral-500 dark:text-neutral-400">
+                    <span className="inline-flex items-center gap-1 text-neutral-600 dark:text-neutral-400">
                       <MapPin className="w-3 h-3" />
                       {item.location}
                     </span>
@@ -106,7 +106,7 @@ export function Experience() {
             {/* Stack / Skills pills */}
             {item.skills && item.skills.length > 0 && (
               <div className="flex flex-wrap items-center gap-1.5 pt-1.5">
-                <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-wider mr-1">Stack:</span>
+                <span className="text-[10px] font-mono text-neutral-600 uppercase tracking-wider mr-1">Stack:</span>
                 {item.skills.map((skill) => (
                   <span
                     key={skill}

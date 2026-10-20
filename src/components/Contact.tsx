@@ -5,10 +5,10 @@ export function Contact() {
   return (
     <section id="contact" className="py-7 border-b border-stone-200">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xs font-mono uppercase tracking-wider text-stone-500">
+        <h2 className="text-xs font-mono uppercase tracking-wider text-stone-600">
           Contact
         </h2>
-        <span className="text-[11px] font-mono text-stone-400">
+        <span className="text-[11px] font-mono text-stone-600">
           Get in Touch
         </span>
       </div>
@@ -34,7 +34,7 @@ export function Contact() {
                 <div className="text-xs font-medium text-stone-900">
                   Email
                 </div>
-                <div className="text-[11px] font-mono text-stone-500 truncate">
+                <div className="text-[11px] font-mono text-stone-600 truncate">
                   {userData.contact.email}
                 </div>
               </div>
@@ -57,7 +57,7 @@ export function Contact() {
                 <div className="text-xs font-medium text-stone-900">
                   Topmate
                 </div>
-                <div className="text-[11px] font-mono text-stone-500">
+                <div className="text-[11px] font-mono text-stone-600">
                   Schedule a 1:1 call
                 </div>
               </div>

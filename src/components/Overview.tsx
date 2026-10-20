@@ -49,10 +49,10 @@ export function Overview() {
   return (
     <section id="overview" className="py-7 border-b border-neutral-200 dark:border-neutral-800/80">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
           Overview
         </h2>
-        <span className="text-[11px] font-mono text-neutral-400 dark:text-neutral-500">
+        <span className="text-[11px] font-mono text-neutral-600 dark:text-neutral-500">
           Status & Presence
         </span>
       </div>
@@ -60,7 +60,7 @@ export function Overview() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
         {/* Status card */}
         <div className="p-3.5 rounded-lg border border-neutral-200/90 dark:border-neutral-800/90 bg-neutral-100/40 dark:bg-neutral-900/40 space-y-2">
-          <div className="flex items-center gap-2 text-xs text-neutral-500 dark:text-neutral-400">
+          <div className="flex items-center gap-2 text-xs text-neutral-600 dark:text-neutral-400">
             <Briefcase className="w-3.5 h-3.5" />
             <span className="font-mono text-[11px] uppercase tracking-wider">Role & Affiliation</span>
           </div>
@@ -79,12 +79,12 @@ export function Overview() {
 
         {/* Location & Time card */}
         <div className="p-3.5 rounded-lg border border-neutral-200/90 dark:border-neutral-800/90 bg-neutral-100/40 dark:bg-neutral-900/40 space-y-2">
-          <div className="flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-400">
+          <div className="flex items-center justify-between text-xs text-neutral-600 dark:text-neutral-400">
             <div className="flex items-center gap-1.5">
               <MapPin className="w-3.5 h-3.5 text-neutral-500" />
               <span className="font-mono text-[11px] uppercase tracking-wider">Location & Time</span>
             </div>
-            <div className="flex items-center gap-1 font-mono text-[11px] text-neutral-500 dark:text-neutral-400">
+            <div className="flex items-center gap-1 font-mono text-[11px] text-neutral-600 dark:text-neutral-400">
               <Clock className="w-3 h-3" />
               <span>{istTime ? `${istTime} IST` : "IST"}</span>
             </div>
@@ -98,7 +98,7 @@ export function Overview() {
       {/* Email Copy Bar */}
       <div className="mt-3 p-3 rounded-lg border border-neutral-200/90 dark:border-neutral-800/90 bg-neutral-100/30 dark:bg-neutral-900/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5">
         <div className="flex items-center gap-2">
-          <span className="text-xs text-neutral-500 dark:text-neutral-400 font-mono">Contact:</span>
+          <span className="text-xs text-neutral-600 dark:text-neutral-400 font-mono">Contact:</span>
           <span className="text-xs sm:text-sm font-mono text-neutral-800 dark:text-neutral-200 select-all">
             {userData.contact.email}
           </span>
