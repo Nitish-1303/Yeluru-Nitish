@@ -18,7 +18,10 @@ export const metadata: Metadata = {
     follow: true,
   },
   verification: {
-    google: "BMeV2wHlKB6D4kCe1L1FaU-gDaVclbotL5twLNO1_f0",
+    google: [
+      "BMeV2wHlKB6D4kCe1L1FaU-gDaVclbotL5twLNO1_f0",
+      "1sY5Po9RDJuqiBmEpCkAUJbpRqMkkEmCE0716a6XrxY",
+    ],
   },
   alternates: {
     canonical: "/",
