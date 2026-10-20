@@ -1,82 +1,68 @@
-"use client";
-
-import { useState } from "react";
-import { Calendar, ArrowUpRight } from "lucide-react";
-import { StatusButton } from "@/components/status-button";
-import { MeetingScheduler } from "@/components/ui/meeting-scheduler";
+import { Calendar, Mail, ArrowUpRight } from "lucide-react";
 import { userData } from "../data/user.ts";
 
 export function Contact() {
-  const [schedulerKey, setSchedulerKey] = useState(0);
-
-  const handleCopyEmail = async () => {
-    await navigator.clipboard.writeText(userData.contact.email);
-  };
-
-  const handleScheduleMeeting = () => {
-    window.open(userData.contact.topmate, "_blank", "noopener,noreferrer");
-  };
-
   return (
-    <section id="contact" className="py-7 border-b border-neutral-200 dark:border-neutral-800/80">
+    <section id="contact" className="py-7 border-b border-stone-200">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+        <h2 className="text-xs font-mono uppercase tracking-wider text-stone-500">
           Contact
         </h2>
-        <span className="text-[11px] font-mono text-neutral-400 dark:text-neutral-500">
+        <span className="text-[11px] font-mono text-stone-400">
           Get in Touch
         </span>
       </div>
 
       <div className="space-y-4">
-        <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed font-normal">
-          Feel free to reach out directly via email for engineering inquiries or book time on Topmate for a conversation.
+        <p className="text-sm text-stone-700 leading-relaxed font-normal">
+          The fastest way to reach me is email. For a longer conversation, book
+          time on Topmate.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-          {/* Email copy button */}
-          <StatusButton
-            onClick={handleCopyEmail}
-            successLabel="Copied"
-            className="rounded-sm border border-neutral-200/90 dark:border-neutral-800/90 bg-neutral-100/30 dark:bg-neutral-900/30 hover:bg-neutral-100 dark:hover:bg-neutral-800/60 transition-colors justify-start text-left h-auto p-3.5"
+          {/* Email */}
+          <a
+            href={userData.socials.email}
+            className="p-3.5 rounded-lg border border-stone-200/90 bg-stone-100/30 hover:bg-stone-100 transition-colors flex items-center justify-between group"
           >
-            <span className="text-xs font-medium text-neutral-900 dark:text-neutral-100">Copy email</span>
-          </StatusButton>
+            <div className="flex items-center gap-3 min-w-0">
+              <div className="w-8 h-8 rounded-md bg-stone-200/60 flex items-center justify-center text-stone-700 shrink-0">
+                <Mail className="w-4 h-4" />
+              </div>
+              <div className="text-left min-w-0">
+                <div className="text-xs font-medium text-stone-900">
+                  Email
+                </div>
+                <div className="text-[11px] font-mono text-stone-500 truncate">
+                  {userData.contact.email}
+                </div>
+              </div>
+            </div>
+            <ArrowUpRight className="w-4 h-4 text-stone-400 group-hover:text-stone-900 transition-colors shrink-0" />
+          </a>
 
-          {/* Topmate button */}
+          {/* Topmate */}
           <a
             href={userData.contact.topmate}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3.5 rounded-lg border border-neutral-200/90 dark:border-neutral-800/90 bg-neutral-100/30 dark:bg-neutral-900/30 hover:bg-neutral-100 dark:hover:bg-neutral-800/60 transition-colors flex items-center justify-between group"
+            className="p-3.5 rounded-lg border border-stone-200/90 bg-stone-100/30 hover:bg-stone-100 transition-colors flex items-center justify-between group"
           >
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-md bg-neutral-200/60 dark:bg-neutral-800 flex items-center justify-center text-neutral-700 dark:text-neutral-300">
+              <div className="w-8 h-8 rounded-md bg-stone-200/60 flex items-center justify-center text-stone-700">
                 <Calendar className="w-4 h-4" />
               </div>
               <div className="text-left">
-                <div className="text-xs font-medium text-neutral-900 dark:text-neutral-100">
+                <div className="text-xs font-medium text-stone-900">
                   Topmate
                 </div>
-                <div className="text-[11px] font-mono text-neutral-500 dark:text-neutral-400">
+                <div className="text-[11px] font-mono text-stone-500">
                   Schedule a 1:1 call
                 </div>
               </div>
             </div>
-            <ArrowUpRight className="w-4 h-4 text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors" />
+            <ArrowUpRight className="w-4 h-4 text-stone-400 group-hover:text-stone-900 transition-colors" />
           </a>
-        </div>
-
-        <div className="pt-2">
-          <MeetingScheduler
-            key={schedulerKey}
-            title="Book a slot"
-            description="Pick a date range, then continue to Topmate to confirm."
-            scheduleButtonText="Continue on Topmate"
-            cancelButtonText="Clear"
-            onSchedule={handleScheduleMeeting}
-            onCancel={() => setSchedulerKey((k) => k + 1)}
-          />
         </div>
       </div>
     </section>
