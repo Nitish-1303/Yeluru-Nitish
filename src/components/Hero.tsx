@@ -1,8 +1,5 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import { Github, Linkedin, Youtube, Calendar, Mail, ArrowUpRight } from "lucide-react";
-import { AppleHelloEffectNitish } from "@/components/apple-hello-effect-nitish";
+import { HeroIntro } from "./HeroIntro";
 import { userData } from "../data/user.ts";
 import { WireframeBlocks } from "./WireframeBlocks.tsx";
 
@@ -16,34 +13,9 @@ function XIcon({ className }: { className?: string }) {
 }
 
 export function Hero() {
-  const [reducedMotion, setReducedMotion] = useState(false);
-  const [showHello, setShowHello] = useState(true);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReducedMotion(mq.matches);
-    if (mq.matches) {
-      setShowHello(false); // Skip animation for reduced motion
-    }
-    const handler = (e: MediaQueryListEvent) => {
-      setReducedMotion(e.matches);
-      if (e.matches) setShowHello(false);
-    };
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, []);
-
   return (
     <section id="hero" className="pt-6 sm:pt-10 pb-8 border-b border-stone-200">
-      {/* Apple Hello Effect - plays once on load, settles into the page */}
-      {showHello && !reducedMotion && (
-        <div className="mb-6">
-          <AppleHelloEffectNitish
-            onAnimationComplete={() => setShowHello(false)}
-            durationScale={0.8}
-          />
-        </div>
-      )}
+      <HeroIntro />
 
       <div className="flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-6 sm:gap-8">
         {/* Left column: Name, Role, Line, CTAs, Socials */}
