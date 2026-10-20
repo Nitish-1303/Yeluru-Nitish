@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "../components/Analytics.tsx";
+import { ClickTracking } from "../components/ClickTracking.tsx";
 import { WhatsAppButton } from "../components/WhatsAppButton.tsx";
 import "./globals.css";
 
 const siteUrl = "https://www.yelurunitish.tech";
 const pageTitle = "Nitish Yeluru | Full-Stack & GenAI Engineer";
 const pageDescription =
-  "Nitish Yeluru (Yeluru Nitish), full-stack and GenAI engineer in India. React, TypeScript and Python. Open to remote engineering roles at US startups.";
+  "Nitish Yeluru (Yeluru Nitish), full-stack and GenAI engineer in India. I build AI products and full-stack systems in React, TypeScript and Python. Open to founding-engineer roles at early-stage startups, remote with US teams.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -29,10 +30,10 @@ export const metadata: Metadata = {
     url: "/",
     images: [
       {
-        url: "/nitish.jpg",
-        width: 1264,
-        height: 842,
-        alt: "Nitish Yeluru",
+        url: "/og/home.png",
+        width: 1200,
+        height: 630,
+        alt: "Nitish Yeluru, full-stack and GenAI engineer",
       },
     ],
   },
@@ -40,7 +41,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
-    images: ["/nitish.jpg"],
+    creator: "@Vibe_User",
+    images: ["/og/home.png"],
   },
   icons: {
     icon: [
@@ -64,6 +66,8 @@ const personSchema = {
   sameAs: [
     "https://github.com/Nitish-1303",
     "https://linkedin.com/in/yeluru-nitish",
+    "https://x.com/Vibe_User",
+    "https://www.youtube.com/@buildwithnitish",
   ],
   knowsAbout: [
     "Full-Stack Development",
@@ -91,6 +95,7 @@ export default function RootLayout({
         {children}
         <WhatsAppButton />
         <Analytics />
+        <ClickTracking />
       </body>
     </html>
   );
