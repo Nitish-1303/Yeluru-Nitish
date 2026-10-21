@@ -40,6 +40,7 @@ export interface UserData {
     youtube: string;
     topmate: string;
     email: string;
+    paypalMe: string;
   };
   socialLinks: SocialLink[];
   status: {
@@ -122,6 +123,7 @@ export const userData: UserData = {
     youtube: "https://www.youtube.com/@buildwithnitish",
     topmate: "https://topmate.io/yeluru_nitish",
     email: "mailto:yelurunitish006@gmail.com",
+    paypalMe: "https://paypal.me/YeluruNitish",
   },
   socialLinks: [
     { label: "GitHub", href: "https://github.com/Nitish-1303", iconName: "github" },
