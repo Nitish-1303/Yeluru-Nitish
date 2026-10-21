@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Github, Menu, X } from "lucide-react";
+import { Coffee, Github, Menu, X } from "lucide-react";
 
-export function Navbar({ githubUrl }: { githubUrl: string }) {
+export function Navbar({ githubUrl, paypalMeUrl }: { githubUrl: string; paypalMeUrl: string }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -52,13 +52,24 @@ export function Navbar({ githubUrl }: { githubUrl: string }) {
           ))}
         </nav>
 
-        {/* Right: GitHub + mobile toggle */}
+        {/* Right: Buy me a coffee + GitHub + mobile toggle */}
         <div className="flex items-center gap-1.5">
+          <a
+            href={paypalMeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-stone-900 text-stone-50 hover:bg-stone-700 border border-stone-900 transition-colors"
+            aria-label="Buy me a coffee via PayPal"
+          >
+            <Coffee className="w-4 h-4" />
+            <span>Buy me a coffee</span>
+          </a>
+
           <a
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-8 h-8 rounded-md flex items-center justify-center text-stone-600 hover:text-stone-950 hover:bg-stone-200/60 transition-colors"
+            className="hidden sm:flex w-8 h-8 rounded-md items-center justify-center text-stone-600 hover:text-stone-950 hover:bg-stone-200/60 transition-colors"
             aria-label="GitHub Profile"
           >
             <Github className="w-4 h-4" />
