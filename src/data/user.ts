@@ -1,90 +1,25 @@
 /**
  * Centralized portfolio data for Nitish Yeluru.
  * Components render directly from this single source of truth.
- *
- * NOTE: Unset items (photo, education dates) are explicitly marked as null
- * so components render intentional, graceful fallbacks without leaking TODO markers.
  */
-
-export interface SocialLink {
-  label: string;
-  href: string;
-  iconName: 'github' | 'linkedin' | 'x' | 'youtube' | 'topmate' | 'mail';
-}
-
-export interface OverviewFact {
-  label: string;
-  value: string;
-  highlight?: boolean;
-}
 
 export interface UserData {
   name: string;
-  role: string;
-  primaryLine: string;
-  location: {
-    city: string;
-    note: string; // e.g. "moving to Bangalore"
-    display: string;
-    timezone: string; // "Asia/Kolkata"
-  };
   contact: {
     email: string;
     topmate: string;
-    closingDraft: string; // Awaiting user wording; UI defaults to clean "Get in touch" CTA
   };
   socials: {
     github: string;
     linkedin: string;
     x: string;
     youtube: string;
-    topmate: string;
     email: string;
     paypalMe: string;
   };
-  socialLinks: SocialLink[];
-  status: {
-    founderRole: string; // "Founder @ PatchBay"
-    pastRole: string;    // "Ex-Alignerr"
-  };
   hero: {
-    flippingPhrases: string[];
     photoUrl: string | null; // unset: intentional NY monogram fallback
   };
-  // Future sections (Milestone 2)
-  about: {
-    paragraphs: string[];
-  };
-  stackGroups: {
-    number: string;
-    title: string;
-    description?: string;
-    items: string[];
-  }[];
-  experience: {
-    company: string;
-    role: string;
-    employmentType?: string;
-    period: string;
-    duration?: string;
-    location?: string;
-    isCurrent: boolean;
-    badge?: string;
-    projectTitle?: string;
-    description: string;
-    bullets?: string[];
-    skills?: string[];
-    logoUrl?: string;
-  }[];
-  projects: {
-    id: string;
-    title: string;
-    badge: string;
-    statusSummary: string;
-    details: string[];
-    link?: string;
-    linkText?: string;
-  }[];
   openSource: {
     prNumber: number;
     repo: string;
@@ -94,301 +29,25 @@ export interface UserData {
     description: string;
     logoUrl?: string;
   }[];
-  education: {
-    institution: string;
-    degree: string;
-    dates: string | null; // unset: omit on rendered page until confirmed
-  };
 }
 
 export const userData: UserData = {
   name: "Nitish Yeluru",
-  role: "Full-stack & GenAI engineer",
-  primaryLine: "Founder @ PatchBay",
-  location: {
-    city: "Chennai",
-    note: "moving to Bangalore",
-    display: "Chennai, moving to Bangalore",
-    timezone: "Asia/Kolkata",
-  },
   contact: {
     email: "yelurunitish006@gmail.com",
     topmate: "https://topmate.io/yeluru_nitish",
-    closingDraft: "Open to compelling engineering roles and technical collaborations.",
   },
   socials: {
     github: "https://github.com/Nitish-1303",
     linkedin: "https://linkedin.com/in/yeluru-nitish",
     x: "https://x.com/Vibe_User",
     youtube: "https://www.youtube.com/@buildwithnitish",
-    topmate: "https://topmate.io/yeluru_nitish",
     email: "mailto:yelurunitish006@gmail.com",
     paypalMe: "https://paypal.me/YeluruNitish",
   },
-  socialLinks: [
-    { label: "GitHub", href: "https://github.com/Nitish-1303", iconName: "github" },
-    { label: "LinkedIn", href: "https://linkedin.com/in/yeluru-nitish", iconName: "linkedin" },
-    { label: "X", href: "https://x.com/Vibe_User", iconName: "x" },
-    { label: "YouTube", href: "https://www.youtube.com/@buildwithnitish", iconName: "youtube" },
-    { label: "Topmate", href: "https://topmate.io/yeluru_nitish", iconName: "topmate" },
-  ],
-  status: {
-    founderRole: "Independent Projects",
-    pastRole: "Alignerr (AI Eval)",
-  },
   hero: {
-    flippingPhrases: [
-      "Building PatchBay (breaking API detector)",
-      "Full-stack web & GenAI applications",
-      "Sharing AI engineering on YouTube",
-      "Based in Chennai, moving to Bangalore",
-    ],
     photoUrl: "/nitish-avatar.jpg",
   },
-  about: {
-    paragraphs: [
-      "I'm Nitish Yeluru (Yeluru Nitish), a full-stack developer and GenAI engineer from India. I build AI-powered developer tools and LLM products end to end - Next.js, React, TypeScript on the front, Python and FastAPI on the back.",
-      "I currently work as a full-stack developer on independent projects. I'm also building PatchBay, a solo-founder project. Its offline prototype demonstrates a red-to-green test loop; it is not deployed yet.",
-      "As an open source contributor, I have six merged PRs across Gitea, Reflex, Unsloth, Magnitude and neatroots, including an authentication-bypass fix in Magnitude and a Windows port-conflict fix in Unsloth Studio. I share what I build on my YouTube channel BuildWithNitish, and I'm open to founding engineer and AI engineer roles.",
-    ],
-  },
-  // Draft stack for trimming (Milestone 2)
-  stackGroups: [
-    {
-      number: "01",
-      title: "Core Languages",
-      description: "Primary programming languages for full-stack and systems engineering",
-      items: ["TypeScript", "Python", "Go", "JavaScript"],
-    },
-    {
-      number: "02",
-      title: "AI & Voice Engineering",
-      description: "LLM agent architectures, voice streaming, and policy benchmarking",
-      items: ["OpenAI", "Vertex AI", "RAG Pipelines", "AI Agents", "MuJoCo"],
-    },
-    {
-      number: "03",
-      title: "Frontend & Web",
-      description: "Performant web applications, modern frameworks, and responsive design",
-      items: ["React", "Next.js", "Tailwind CSS", "HTML5 / CSS3"],
-    },
-    {
-      number: "04",
-      title: "Backend & Databases",
-      description: "Microservices, async APIs, and database management",
-      items: ["FastAPI", "Node.js", "MongoDB", "REST APIs"],
-    },
-    {
-      number: "05",
-      title: "Cloud & DevOps",
-      description: "Containerized deployments, automated CI/CD pipelines, and cloud services",
-      items: ["GCP (Cloud Run, Pub/Sub)", "Docker", "GitHub Actions", "CI/CD", "Git"],
-    },
-    {
-      number: "06",
-      title: "Security & Systems",
-      description: "Threat modeling, role-based access control, and robotics systems",
-      items: ["Threat Modeling", "OWASP Top 10", "RBAC", "ROS", "Audit Logging"],
-    },
-  ],
-  experience: [
-    {
-      company: "Independent Projects",
-      role: "Full-Stack Developer",
-      employmentType: "Self-employed",
-      period: "2025 – Present",
-      location: "India",
-      isCurrent: true,
-      description:
-        "Building and shipping full-stack projects: HealthyChef, CipherBill and a Migma x Spotify concept demo.",
-      skills: ["TypeScript", "React", "Next.js", "Node.js"],
-    },
-    {
-      company: "Alignerr",
-      role: "Senior Software Engineer — AI Evaluation & Benchmarks",
-      employmentType: "Part-time",
-      period: "May 2026 – Present",
-      duration: "6 mos",
-      location: "Florida, United States · Remote",
-      projectTitle: "Reinforcement Learning Evaluation (MuJoCo)",
-      isCurrent: true,
-      description:
-        "Evaluating reinforcement learning policies in MuJoCo simulation environments and benchmark tasks.",
-      bullets: [
-        "Evaluated reinforcement learning policies in MuJoCo simulation environments.",
-        "Analyzed agent behavior, policy correctness, and performance against benchmark tasks.",
-        "Identified failure cases and provided structured technical feedback to improve RL model quality.",
-        "Contributed to evaluation pipelines for embodied AI and reinforcement learning systems.",
-      ],
-      skills: ["Reinforcement Learning", "MuJoCo", "Robotic Process Automation", "ROS"],
-      logoUrl: "/logos/alignerr.png",
-    },
-    {
-      company: "Open Source Connect",
-      role: "Contributor",
-      employmentType: "Full-time",
-      period: "Jul 2025 – Jan 2026",
-      duration: "7 mos",
-      location: "Remote",
-      isCurrent: false,
-      description:
-        "Contributed bug fixes, performance improvements, and CI/CD workflow optimizations across open-source repositories.",
-      bullets: [
-        "Contributed bug fixes, performance improvements, and developer documentation across open-source repositories.",
-        "Reviewed and mentored community pull requests, improving code quality and contributor onboarding.",
-        "Implemented CI/CD workflow optimizations using GitHub Actions, eliminating manual deployment tasks and reducing release overhead.",
-      ],
-      skills: ["Full-Stack Development", "Node.js", "GitHub Actions", "CI/CD"],
-      logoUrl: "/logos/opensourceconnect.png",
-    },
-    {
-      company: "SmartInternz",
-      role: "Full Stack Developer",
-      employmentType: "Internship",
-      period: "May 2024 – Jul 2024",
-      duration: "3 mos",
-      location: "Visakhapatnam, Andhra Pradesh, India · Remote",
-      isCurrent: false,
-      description:
-        "Architected and delivered a full-stack College Infrastructure Management System supporting 4 user roles.",
-      bullets: [
-        "Architected and delivered a full-stack College Infrastructure Management System supporting 4 user roles (faculty, students, lab assistants, administrators) across 10+ academic departments.",
-        "Implemented secure role-based access control (RBAC), image-enabled fault reporting, approval workflows, and automated low-stock alert systems.",
-        "Built and deployed the platform using a full-stack JavaScript architecture with MongoDB, React, and Node.js, pairing responsive UX with secure operational workflows.",
-      ],
-      skills: ["MERN Stack", "MongoDB", "React", "Node.js", "RBAC"],
-      logoUrl: "/logos/smartinternz.png",
-    },
-    {
-      company: "EduSkills Foundation",
-      role: "Cyber Security Analyst",
-      employmentType: "Internship",
-      period: "May 2023 – Jul 2023",
-      duration: "3 mos",
-      location: "India",
-      isCurrent: false,
-      description:
-        "Conducted threat modeling and vulnerability assessments on web applications with OWASP Top 10 remediation.",
-      bullets: [
-        "Conducted threat modeling and vulnerability scans on 5+ web applications, identifying and remediating OWASP Top 10 issues including broken auth and IDOR.",
-        "Implemented role-based access controls and audit logging for sensitive user actions across internal systems.",
-      ],
-      skills: ["Cyber Security", "OWASP Top 10", "Threat Modeling", "Audit Logging"],
-      logoUrl: "/logos/eduskills.png",
-    },
-  ],
-  projects: [
-    {
-      id: "flake-hunter",
-      title: "Flake Hunter",
-      badge: "Testing & Reliability",
-      statusSummary:
-        "A flaky-test diagnosis engine that replays failing tests across isolated sandboxes, ranks the worst offenders with statistical confidence, and presents a root-cause report alongside a proposed verified fix.",
-      details: [
-        "Built a full root-cause pipeline: evidence collection, patch proposal, and rerun validation unified in one interface",
-        "Applied Wilson confidence intervals to rank flaky tests by statistical significance instead of raw failure counts",
-        "Designed deterministic seeded-data runs so every diagnosis is reproducible and auditable",
-      ],
-      link: "https://github.com/Nitish-1303/flake-hunter",
-      linkText: "View repository",
-    },
-    {
-      id: "lumina",
-      title: "Lumina",
-      badge: "AI Assistant",
-      statusSummary:
-        "A concept build for an AI personal assistant in the iMessage idiom, with a fully working in-browser simulator driven by a Gemini-backed agent loop.",
-      details: [
-        "Structured a React, TypeScript and Vite application around a realistic chat simulator",
-        "Implemented a Gemini-backed agent loop handling multi-turn conversational flows",
-        "Shipped assistant features for briefings, goal tracking and proactive recommendations",
-      ],
-      link: "https://github.com/Nitish-1303/lumina-OS",
-      linkText: "View repository",
-    },
-    {
-      id: "proof-of-humanity",
-      title: "Proof-of-Humanity PoC",
-      badge: "Open Source",
-      statusSummary:
-        "A standalone proof-of-concept that verifies real human contributors in an open-source contribution pool using signed commits and cryptographic challenges.",
-      details: [
-        "Built Python registry parsing and validation for contributor records",
-        "Wired signed-commit verification directly into GitHub Actions CI",
-        "Implemented an email nonce challenge verified with SHA-256 digests",
-      ],
-      link: "https://github.com/Nitish-1303/poh-poc",
-      linkText: "View repository",
-    },
-    {
-      id: "recallproof",
-      title: "RecallProof",
-      badge: "AI Agents",
-      statusSummary:
-        "An experimental FastAPI service that stress-tests memory retrieval and update reliability for AI agent memory systems.",
-      details: [
-        "Built memory ingestion and recall endpoints backed by HydraDB",
-        "Designed an evaluation flow that compares old versus updated memories after edits",
-        "Returns retrieved evidence, latency metrics and a pass/fail verdict per test",
-      ],
-      link: "https://github.com/Nitish-1303/Recallops-Nitish",
-      linkText: "View repository",
-    },
-    {
-      id: "trellis-order-workflow",
-      title: "Trellis Order Workflow Orchestration",
-      badge: "Temporal",
-      statusSummary:
-        "A distributed order and shipping orchestration system built on FastAPI, Temporal and PostgreSQL, modeling real production workflow patterns.",
-      details: [
-        "Implemented a parent order workflow handling approval and cancellation signals",
-        "Split shipping into a child workflow on its own task queue for clean isolation",
-        "Containerized the full stack with Docker Compose for one-command reproducibility",
-      ],
-      link: "https://github.com/Nitish-1303/Trelli-Home-Assignment---Yeluru-Nitish",
-      linkText: "View repository",
-    },
-    {
-      id: "fingerframe-live",
-      title: "fingerframe-live",
-      badge: "Computer Vision",
-      statusSummary:
-        "A real-time hand-framing demo that renders a live AI video effect inside a frame you draw with your fingers in front of the camera.",
-      details: [
-        "Implemented MediaPipe hand tracking with smoothing and dropout handling for a stable frame",
-        "Built WebRTC video transformation with canvas compositing at interactive frame rates",
-        "Added live prompt switching so the effect changes without breaking the camera session",
-      ],
-      link: "https://github.com/Nitish-1303/fingerframe-live",
-      linkText: "View repository",
-    },
-    {
-      id: "college-infrastructure-management",
-      title: "College Infrastructure Management System",
-      badge: "Team Project",
-      statusSummary:
-        "A full-stack MERN application, built as a team, for managing campus equipment, fault reports and approvals across departments.",
-      details: [
-        "Implemented role-based access control for students, faculty and admins",
-        "Built department-level equipment records with a complete issue-reporting flow",
-        "Delivered approval chains, reporting views and notification workflows",
-      ],
-      link: "https://github.com/Nitish-1303/Batch-24-College-Infrastructure-Management-system-",
-      linkText: "View repository",
-    },
-    {
-      id: "buildwithnitish",
-      title: "BuildWithNitish",
-      badge: "YouTube Channel",
-      statusSummary: "YouTube channel dedicated to AI news, tooling updates, and developer Shorts.",
-      details: [
-        "Educational channel covering recent advancements across generative AI and modern engineering tools.",
-        "Focuses on concise, practical breakdowns of emerging AI tools and agent frameworks.",
-      ],
-      link: "https://www.youtube.com/@buildwithnitish",
-      linkText: "Visit YouTube channel",
-    },
-  ],
   openSource: [
     {
       prNumber: 39155,
@@ -442,9 +101,4 @@ export const userData: UserData = {
       description: "Fixes #245. The steering wrapper dropped _thenUnwrap, so OpenAI's chat.completions.parse() and responses.parse() threw before returning parsed results. This forwards it to the original request and adds regression tests for both parse paths.",
     },
   ],
-  education: {
-    institution: "Baba Institute of Technology & Sciences",
-    degree: "B.Tech in Computer Science and Engineering",
-    dates: null, // Unset: omitted from rendered UI until confirmed
-  },
 };

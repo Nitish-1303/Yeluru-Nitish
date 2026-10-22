@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Coffee, Github, Menu, X } from "lucide-react";
+import { Coffee, Github, Mail, Menu, X } from "lucide-react";
 
-export function Navbar({ githubUrl, paypalMeUrl }: { githubUrl: string; paypalMeUrl: string }) {
+export function Navbar({ githubUrl, emailUrl, paypalMeUrl }: { githubUrl: string; emailUrl: string; paypalMeUrl: string }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -52,17 +52,15 @@ export function Navbar({ githubUrl, paypalMeUrl }: { githubUrl: string; paypalMe
           ))}
         </nav>
 
-        {/* Right: Buy me a coffee + GitHub + mobile toggle */}
+        {/* Right: Email + GitHub + Buy me a coffee + mobile toggle */}
         <div className="flex items-center gap-1.5">
           <a
-            href={paypalMeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={emailUrl}
             className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-stone-900 text-stone-50 hover:bg-stone-700 border border-stone-900 transition-colors"
-            aria-label="Buy me a coffee via PayPal"
+            aria-label="Email Nitish"
           >
-            <Coffee className="w-4 h-4" />
-            <span>Buy me a coffee</span>
+            <Mail className="w-4 h-4" />
+            <span>Email</span>
           </a>
 
           <a
@@ -73,6 +71,16 @@ export function Navbar({ githubUrl, paypalMeUrl }: { githubUrl: string; paypalMe
             aria-label="GitHub Profile"
           >
             <Github className="w-4 h-4" />
+          </a>
+
+          <a
+            href={paypalMeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:flex w-8 h-8 rounded-md items-center justify-center text-stone-600 hover:text-stone-950 hover:bg-stone-200/60 transition-colors"
+            aria-label="Buy me a coffee via PayPal"
+          >
+            <Coffee className="w-4 h-4" />
           </a>
 
           <button
@@ -101,6 +109,15 @@ export function Navbar({ githubUrl, paypalMeUrl }: { githubUrl: string; paypalMe
                 {link.label}
               </a>
             ))}
+            <a
+              href={paypalMeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="px-3 py-2 text-sm rounded-md text-stone-700 hover:text-stone-950 hover:bg-stone-200/60 transition-colors"
+            >
+              Buy me a coffee
+            </a>
           </nav>
         </div>
       )}

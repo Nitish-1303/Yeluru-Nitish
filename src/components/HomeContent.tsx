@@ -10,7 +10,7 @@ import { Footer } from "./Footer.tsx";
 export function HomeContent() {
   return (
     <div className="min-h-screen bg-[#faf7f4] text-stone-900 flex flex-col font-sans">
-      <Navbar githubUrl={userData.socials.github} paypalMeUrl={userData.socials.paypalMe} />
+      <Navbar githubUrl={userData.socials.github} emailUrl={userData.socials.email} paypalMeUrl={userData.socials.paypalMe} />
 
       <main className="flex-1 w-full max-w-2xl mx-auto px-4 pb-20 sm:px-6">
         <Hero />
