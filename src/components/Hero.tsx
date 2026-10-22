@@ -50,8 +50,8 @@ export function Hero() {
 
           <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-normal">
             I build AI products and full-stack systems that solve real
-            problems. Open to founding-engineer roles at early-stage startups,
-            remote or Bengaluru hybrid.
+            problems. Open to remote engineering roles, including US-based
+            teams.
           </p>
 
           {/* Primary actions */}
