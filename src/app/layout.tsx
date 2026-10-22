@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "../components/Analytics.tsx";
 import { ClickTracking } from "../components/ClickTracking.tsx";
 import { WhatsAppButton } from "../components/WhatsAppButton.tsx";
@@ -104,6 +105,7 @@ export default function RootLayout({
         <WhatsAppButton />
         <Analytics />
         <ClickTracking />
+        <SpeedInsights />
       </body>
     </html>
   );
