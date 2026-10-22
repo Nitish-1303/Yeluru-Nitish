@@ -7,7 +7,7 @@ import "./globals.css";
 const siteUrl = "https://www.yelurunitish.tech";
 const pageTitle = "Nitish Yeluru | Full-Stack & GenAI Engineer";
 const pageDescription =
-  "Nitish Yeluru (Yeluru Nitish), full-stack and GenAI engineer in India. I build AI products and full-stack systems in React, TypeScript and Python. Open to founding-engineer roles at early-stage startups, remote with US teams.";
+  "Nitish Yeluru, full-stack and GenAI engineer. React, TypeScript and Python. Open to remote engineering roles, including US-based teams.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -72,6 +72,11 @@ const personSchema = {
     "https://x.com/Vibe_User",
     "https://www.youtube.com/@buildwithnitish",
   ],
+  description: pageDescription,
+  homeLocation: {
+    "@type": "Place",
+    address: { "@type": "PostalAddress", addressCountry: "IN" },
+  },
   knowsAbout: [
     "Full-Stack Development",
     "Generative AI",
