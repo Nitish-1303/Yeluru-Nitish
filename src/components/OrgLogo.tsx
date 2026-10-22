@@ -76,7 +76,7 @@ export function OrgLogo({ repo, localLogoUrl, size = 20, className = "" }: OrgLo
   return (
     <img
       src={currentSrc}
-      alt={`${org} original logo`}
+      alt={`${org} logo`}
       width={size}
       height={size}
       onError={handleError}
