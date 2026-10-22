@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Coffee, Github, Mail, Menu, X } from "lucide-react";
+import { Coffee, Download, Github, Mail, Menu, X } from "lucide-react";
 
 export function Navbar({ githubUrl, emailUrl, paypalMeUrl }: { githubUrl: string; emailUrl: string; paypalMeUrl: string }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -30,7 +30,7 @@ export function Navbar({ githubUrl, emailUrl, paypalMeUrl }: { githubUrl: string
           : "bg-[#faf7f4]/60 backdrop-blur-xs border-transparent"
       }`}
     >
-      <div className="max-w-2xl mx-auto px-4 h-14 flex items-center justify-between gap-3">
+      <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between gap-3">
         {/* Left: wordmark */}
         <a
           href="#hero"
@@ -40,7 +40,7 @@ export function Navbar({ githubUrl, emailUrl, paypalMeUrl }: { githubUrl: string
         </a>
 
         {/* Center: Desktop Nav Links */}
-        <nav className="hidden md:flex items-center gap-1 text-xs text-stone-600">
+        <nav className="hidden lg:flex items-center gap-1 text-xs text-stone-600">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -74,19 +74,31 @@ export function Navbar({ githubUrl, emailUrl, paypalMeUrl }: { githubUrl: string
           </a>
 
           <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden lg:inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-stone-900 text-stone-50 hover:bg-stone-700 border border-stone-900 transition-colors"
+            aria-label="Download Nitish's resume (PDF)"
+          >
+            <Download className="w-4 h-4" />
+            <span>Download Resume</span>
+          </a>
+
+          <a
             href={paypalMeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:flex w-8 h-8 rounded-md items-center justify-center text-stone-600 hover:text-stone-950 hover:bg-stone-200/60 transition-colors"
+            className="hidden lg:inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-stone-900 text-stone-50 hover:bg-stone-700 border border-stone-900 transition-colors"
             aria-label="Buy me a coffee via PayPal"
           >
             <Coffee className="w-4 h-4" />
+            <span>Buy me a coffee</span>
           </a>
 
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden w-8 h-8 rounded-md flex items-center justify-center text-stone-600 hover:text-stone-950 hover:bg-stone-200/60 transition-colors"
+            className="lg:hidden w-8 h-8 rounded-md flex items-center justify-center text-stone-600 hover:text-stone-950 hover:bg-stone-200/60 transition-colors"
             aria-label="Toggle mobile menu"
             aria-expanded={mobileMenuOpen}
           >
@@ -97,7 +109,7 @@ export function Navbar({ githubUrl, emailUrl, paypalMeUrl }: { githubUrl: string
 
       {/* Mobile Nav dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-stone-200 bg-[#faf7f4]/95 backdrop-blur-md px-4 py-3 animate-in slide-in-from-top-2 duration-150">
+        <div className="lg:hidden border-b border-stone-200 bg-[#faf7f4]/95 backdrop-blur-md px-4 py-3 animate-in slide-in-from-top-2 duration-150">
           <nav className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <a
@@ -109,15 +121,36 @@ export function Navbar({ githubUrl, emailUrl, paypalMeUrl }: { githubUrl: string
                 {link.label}
               </a>
             ))}
-            <a
-              href={paypalMeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2 text-sm rounded-md text-stone-700 hover:text-stone-950 hover:bg-stone-200/60 transition-colors"
-            >
-              Buy me a coffee
-            </a>
+            <div className="flex flex-col gap-2 pt-2">
+              <a
+                href={emailUrl}
+                onClick={() => setMobileMenuOpen(false)}
+                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-stone-900 text-stone-50 hover:bg-stone-700 border border-stone-900 transition-colors justify-center"
+              >
+                <Mail className="w-4 h-4" />
+                <span>Email</span>
+              </a>
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-stone-900 text-stone-50 hover:bg-stone-700 border border-stone-900 transition-colors justify-center"
+              >
+                <Download className="w-4 h-4" />
+                <span>Download Resume</span>
+              </a>
+              <a
+                href={paypalMeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-stone-900 text-stone-50 hover:bg-stone-700 border border-stone-900 transition-colors justify-center"
+              >
+                <Coffee className="w-4 h-4" />
+                <span>Buy me a coffee</span>
+              </a>
+            </div>
           </nav>
         </div>
       )}
